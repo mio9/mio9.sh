@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="maincontainer">
     <span id="mio" @click="gotoLink('https://mio9.sh')">MIO9.sh</span>
 
     <div id="links">
@@ -92,11 +92,10 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto+Mono:300,400,500,700");
-#app {
-  font-family: "Roboto Mono", Courier, monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+.maincontainer {
+  font-family: "Roboto Mono", monospace;
+  /* font-size: 20px; */
   text-align: left;
   color: #fefefe;
   margin-left: 60px;
@@ -110,7 +109,7 @@ body {
   font-family: "Major Mono Display", monospace;
 }
 .minor-msg {
-  font-size: 10px;
+  font-size: 11px;
   color: darkgray;
 }
 .menu-item.active {
