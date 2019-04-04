@@ -1,55 +1,119 @@
 <template>
-  <div>
-    <nuxt />
+  <div id="app">
+    <span id="mio" @click="gotoLink('https://mio9.sh')">MIO9.sh</span>
+
+    <div id="links">
+      <span
+        @click="showProjects=!showProjects"
+        v-bind:class="{active:showProjects}"
+        class="menu-item"
+      >[Projects]</span>
+      <span @click="openLink('https://twitter.com/mio9_sh')">[Twitter]</span>
+      <span @click="openLink('https://instagram.com/mio9.sh')">[IG]</span>
+      <span @click="openLink('https://www.youtube.com/channel/UCU5-HW3G5U2ztQloUsu6qgQ')">[YouTube]</span>
+      <span @click="openLink('https://discord.gg/UYX84Za')">[Discord]</span>
+      <span @click="openLink('https://www.twitch.tv/miosh9')">[Twitch]</span>
+    </div>
+    <div id="project" v-if="showProjects">
+      >
+      <span>[PixRail Metro]</span>
+      <span
+        @click="showBots=!showBots"
+        v-bind:class="{active:showBots}"
+        class="menu-item"
+      >[Discord Bots]</span>
+
+      <span
+        @click="showPlugins=!showPlugins"
+        v-bind:class="{active:showPlugins}"
+        class="menu-item"
+      >[Spigot Plugins]</span>
+      <!-- Bots area -->
+      <div id="bots" v-if="showBots">
+        >> Bots:
+        <span>[TC-Bot(Mightyyy)]</span>
+      </div>
+      <div id="bots" v-if="showPlugins">
+        >> Plugins:
+        <span>[MetroCard]</span>
+        <span>[PixRail]</span>
+      </div>
+    </div>
+    <div>
+      <span class="minor-msg">{{randM}} {{randI}} {{randO}}</span>
+    </div>
+    <hr>
+    <nuxt/>
   </div>
 </template>
 
+<script>
+import Phrases from "@/assets/Phrases";
+export default {
+  name: "App",
+  data() {
+    return {
+      showProjects: false,
+      showBots: false,
+      showPlugins: false
+    };
+  },
+  computed: {
+    randM() {
+      return Phrases.m[this.getRandomInt(Phrases.m.length)];
+    },
+    randI() {
+      return Phrases.i[this.getRandomInt(Phrases.i.length)];
+    },
+    randO() {
+      return Phrases.o[this.getRandomInt(Phrases.o.length)];
+    },
+    refreshes() {
+      return parseInt(sessionStorage.getItem("refreshes") || 0) || 0;
+    }
+  },
+  methods: {
+    openLink(link) {
+      window.open(link, "_blank");
+    },
+    gotoLink(link) {
+      window.open(link, "_self");
+    },
+
+    getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+  },
+  mounted() {
+    let refreshes = this.refreshes;
+    sessionStorage.setItem("refreshes", ++refreshes);
+  }
+};
+</script>
+
 <style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto+Mono:300,400,500,700");
+#app {
+  font-family: "Roboto Mono", Courier, monospace;
   -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  color: #fefefe;
+  margin-left: 60px;
+  margin-right: 60px;
 }
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+body {
+  background-color: #202020;
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+#mio {
+  font-size: 60px;
+  font-family: "Major Mono Display", monospace;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.minor-msg {
+  font-size: 10px;
+  color: darkgray;
 }
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.menu-item.active {
+  color: aqua;
 }
 </style>
