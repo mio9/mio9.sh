@@ -1,6 +1,6 @@
 <template>
   <div>
-    <no-ssr>
+    <no-ssr placeholder="Loading console...">
       <div
         class="warning"
         v-if="!$device.isDesktop"
