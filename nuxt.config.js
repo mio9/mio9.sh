@@ -41,7 +41,8 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    'nuxt-device-detect'
+    'nuxt-device-detect',
+    '@nuxtjs/markdownit'
   ],
   /*
    ** Axios module configuration

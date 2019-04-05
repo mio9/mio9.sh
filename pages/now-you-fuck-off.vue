@@ -1,7 +1,7 @@
 <template>
   <div class="test">
     <span class="superlarge">GET OUT</span>
-<pre>                     /"\
+    <pre>                     /"\
                     |\./|
                     |   |
                     |   |
@@ -23,19 +23,17 @@
 </template>
 <script>
 export default {
-  name: 'FuckOff',
-  data(){
-    return{
-      
-    }
+  name: "FuckOff",
+  data() {
+    return {};
   }
-}
+};
 </script>
 <style>
-pre{
+pre {
   font-family: "Roboto Mono", Courier, monospace;
 }
-.superlarge{
+.superlarge {
   font-size: 50px;
   font-weight: 700;
 }

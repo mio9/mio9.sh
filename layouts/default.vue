@@ -1,6 +1,6 @@
 <template>
   <div class="maincontainer">
-    <span id="mio" @click="gotoLink('https://mio9.sh')">MIO9.sh</span>
+    <span id="mio" @click="gotoLink('/')">MIO9.sh</span>
 
     <div id="links">
       <span
@@ -16,7 +16,7 @@
     </div>
     <div id="project" v-if="showProjects">
       >
-      <span>[PixRail Metro]</span>
+      <span @click="gotoLink('/pixrail')">[PixRail]</span>
       <span
         @click="showBots=!showBots"
         v-bind:class="{active:showBots}"
@@ -35,12 +35,12 @@
       </div>
       <div id="bots" v-if="showPlugins">
         >> Plugins:
-        <span>[MetroCard]</span>
+        <span @click="gotoLink('/metrocard')">[MetroCard]</span>
         <span>[PixRail]</span>
       </div>
     </div>
     <div>
-      <span class="minor-msg">{{randM}} {{randI}} {{randO}}</span>
+      <span class="minor-msg" @click="refreshMIO">{{mioPhrase}}</span>
     </div>
     <hr>
     <nuxt/>
@@ -55,19 +55,11 @@ export default {
     return {
       showProjects: false,
       showBots: false,
-      showPlugins: false
+      showPlugins: false,
+      mioPhrase: "M. I. O."
     };
   },
   computed: {
-    randM() {
-      return Phrases.m[this.getRandomInt(Phrases.m.length)];
-    },
-    randI() {
-      return Phrases.i[this.getRandomInt(Phrases.i.length)];
-    },
-    randO() {
-      return Phrases.o[this.getRandomInt(Phrases.o.length)];
-    },
     refreshes() {
       return parseInt(sessionStorage.getItem("refreshes") || 0) || 0;
     }
@@ -82,17 +74,25 @@ export default {
 
     getRandomInt(max) {
       return Math.floor(Math.random() * Math.floor(max));
+    },
+    refreshMIO() {
+      this.mioPhrase =
+        Phrases.m[this.getRandomInt(Phrases.m.length)] +
+        " " +
+        Phrases.i[this.getRandomInt(Phrases.i.length)] +
+        " " +
+        Phrases.o[this.getRandomInt(Phrases.o.length)];
     }
   },
   mounted() {
     let refreshes = this.refreshes;
     sessionStorage.setItem("refreshes", ++refreshes);
+    this.refreshMIO();
   }
 };
 </script>
 
 <style>
-
 .maincontainer {
   font-family: "Roboto Mono", monospace;
   /* font-size: 20px; */
@@ -114,5 +114,18 @@ body {
 }
 .menu-item.active {
   color: aqua;
+}
+a{
+  color: lightskyblue;
+}
+code{
+  color: yellow;
+  background-color: blue;
+}
+h1{
+  font-size: 30px;
+}
+iframe{
+  border-style: solid;
 }
 </style>

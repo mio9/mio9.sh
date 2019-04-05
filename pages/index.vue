@@ -14,7 +14,7 @@
       <div
         id="40-refresh"
         v-if="refreshes>=40"
-      >&gt; You did it 40 times already, just F12 if you want to see all M.I.O. combinatons....</div>
+      >&gt; You did it 40 times already, you can just... click on the word to get a new combination...</div>
       <div v-for="line in terminalLines" :key="line">{{line}}</div>
       <div>$ {{inputText}}</div>
       <!-- <img src="@/assets/logo.png" alt=""> -->
