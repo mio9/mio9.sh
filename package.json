@@ -1,7 +1,7 @@
 {
   "name": "mio9.sh",
   "version": "1.0.0",
-  "description": "SSR mio9.sh",
+  "description": "bash ./mio9.sh --power max",
   "author": "mio9",
   "private": true,
   "scripts": {
