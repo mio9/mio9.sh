@@ -7,7 +7,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: "./mio9.sh",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -44,6 +44,15 @@ module.exports = {
     'nuxt-device-detect',
     '@nuxtjs/markdownit'
   ],
+
+  markdownit:{
+    linkify: true,
+    breaks: true,
+    use: [
+      'markdown-it-checkbox',
+      'markdown-it-highlightjs'
+    ]
+  },
   /*
    ** Axios module configuration
    */

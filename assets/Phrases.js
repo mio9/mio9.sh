@@ -21,20 +21,33 @@ export default {
     "Let the bass kick (try type the same in the terminal)",
     "冬の窓辺に、花一輪。。消えないあの時の記憶。。甘えた、その背中、温もりはもう･･･雪と、共に消えてゆく",
     "ﾃﾞｨｽｲｽﾞﾄﾗﾎﾞｩ!!!ﾃﾞﾚﾚﾝ! ﾄﾞｩﾝﾄﾞｩﾄﾞｩﾄﾞｩﾄﾞｩ･･･ﾋｭﾙﾙﾙﾙﾙﾙﾙ",
-    "ONCE AGAIN, I RETURNED!",
+    "ONCE AGAIN, I RETURNED! ★◎◎◎◎",
     "Gimme the camera",
     "The doors on the left side will open",
     "Ou fuck I can't believe you've done this",
     "ここは譲れません！",
     "一航戦赤城、寝ます!",
     "Bass Bass Kick Kick Bass Kick Kick (+1 empty beat)(repeat)",
-    "up down up down left right left REPEAT",
+    "meep meep",
     "330624700 30624770 534202 13942 43140624",
     'cout << "MIO9 is currently " << states.getState() << "Please come back after " << states.getAT().toString()',
     "We're not getting red, now, and never",
     "We, should be the one to take control of our own place, not the <font color='red'>r</font><font color='yellow'>e</font><font color='red'>tarts</font>",
     "Ever wonder how <font color='red'>t</font><font color='yellow'>h</font><font color='red'>ey</font> could produce such amazingly retarded policies, <font color='red'>t</font><font color='yellow'>h</font><font color='red'>ey</font> think with their butt, while sitting in a 25.5°C room",
-    "50 years, fucked up with 22 years, but can't get to 50 years anyways"
+    "50 years, fucked up with 22 years, but can't get to 50 years anyways",
+    "Withdraw the cash!",
+    "What would happen if we cut out all of our capitals going up? nothing special, they'd die, fast.",
+    "When police could no longer be trusted, the place is dead",
+    "But what if they just aren't in first place? Maybe they're another group of people pretenting to be it!",
+    "I crash randomly, I down randomly, sorry about that",
+    "Q U A C K",
+    "I support the complete withdrawal of it, you can beat me up now [what a shame to be human]",
+    "I support setting up individual investigation committee, you can beat me up now [what a shame to be human]",
+    "I'm triggered to hear the station get bombed, you can beat me up now [what a shame to be human]",
+    "Ngo gum hang ding d 5 mo ng wui tai dak ming :)",
+    "Jeng 5 jeng?",
+    "yi hau jau gum gong yea dou 5 cho wo ..",
+    "That's all for today, thank you for watching, please be sure to subscribe and turn on notification, and... see you again, next time."
   ],
   m: [
     "Mysterious",
@@ -51,7 +64,13 @@ export default {
     "Medium",
     "Medical",
     "Midosuji",
-    "Marunouchi"
+    "Marunouchi",
+    "Meatball",
+    "Murasaki",
+    "Mending",
+    "Microwaveable",
+    "m",
+    "Masty"
   ],
   i: [
     "Induction",
@@ -67,7 +86,16 @@ export default {
     "Iwate",
     "Irreplaceable",
     "Incorporated",
-    "Immersive"
+    "Immersive",
+    "Incompatible",
+    "Inhumane",
+    "Infamous",
+    "Inferior",
+    "Immortal",
+    "Industrial",
+    "i",
+    "Irresistable",
+    "Irresponsible"
   ],
   o: [
     "Obfuscator",
@@ -87,7 +115,14 @@ export default {
     "Origami",
     "Otearai",
     "Otemachi",
-    "Ou-fuck-i-cant-believe-you-ve-done-this"
+    "Ou-fuck-i-cant-believe-you-ve-done-this",
+    "Otamatone",
+    "Ox",
+    "o",
+    "Off-loader",
+    "Onii-chan",
+    "On-the-fly",
+    "poi?(why not)"
   ],
   daisukeLyrics:
     "DAISUKE!!\n\

@@ -8,15 +8,27 @@
         v-bind:class="{active:showProjects}"
         class="menu-item"
       >[Projects]</span>
+      <span
+        @click="showContact=!showContact"
+        v-bind:class="{active:showContact}"
+        class="menu-item"
+      >[SNS]</span>
+
+      <span @click="openLink('https://109.mio9.sh')">[m/109]</span>
+
+      <span class="minor-msg">LU:180819-rev1</span>
+      
+    </div>
+    <div id="contact" v-if="showContact">
       <span @click="openLink('https://twitter.com/mio9_sh')">[Twitter]</span>
       <span @click="openLink('https://instagram.com/mio9.sh')">[IG]</span>
       <span @click="openLink('https://www.youtube.com/channel/UCU5-HW3G5U2ztQloUsu6qgQ')">[YouTube]</span>
       <span @click="openLink('https://discord.gg/UYX84Za')">[Discord]</span>
       <span @click="openLink('https://www.twitch.tv/miosh9')">[Twitch]</span>
-    </div>
+      </div>
     <div id="project" v-if="showProjects">
       >
-      <span @click="gotoLink('/pixrail')">[PixRail]</span>
+      <span @click="gotoLink('/raillab')">[RailLab]</span>
       <span
         @click="showBots=!showBots"
         v-bind:class="{active:showBots}"
@@ -31,12 +43,11 @@
       <!-- Bots area -->
       <div id="bots" v-if="showBots">
         >> Bots:
-        <span>[TC-Bot(Mightyyy)]</span>
+        <span>[]</span>
       </div>
       <div id="bots" v-if="showPlugins">
         >> Plugins:
         <span @click="gotoLink('/metrocard')">[MetroCard]</span>
-        <span>[PixRail]</span>
       </div>
     </div>
     <div>
@@ -56,6 +67,7 @@ export default {
       showProjects: false,
       showBots: false,
       showPlugins: false,
+      showContact: false,
       mioPhrase: "M. I. O."
     };
   },
@@ -118,14 +130,17 @@ body {
 a{
   color: lightskyblue;
 }
-code{
-  color: yellow;
-  background-color: blue;
-}
 h1{
   font-size: 30px;
 }
 iframe{
   border-style: solid;
+}
+hr{
+  border: 1.5px solid #cccccc;
+}
+code{
+  background: #303030;
+  padding: 10px;
 }
 </style>

@@ -5,9 +5,12 @@
         class="warning"
         v-if="!$device.isDesktop"
       >[CRITICAL!] This stuff does not work without a keyboard, plug one in before attempting here</div>
-      <div style="color: lime;">(fix) The stylesheet now loads correctly, hurray!</div>
-      <div class="love">🌸 おはようございます！</div>
-      <span>$ bash surgery.sh --patient "grape"</span>
+      <!-- <div style="color: lime;">-------[!!!]-------</div>
+      <div style="color: lime;">(yeet!) New discussion site had opened! Check it out @ <a href="https://109.mio9.sh">[m/109]</a></div>
+      <div style="color: lime;">-------------------</div> -->
+      <div style="color: red;">🔥 🇭🇰 fight against the power! </div>
+      <div style="color: red;">🔥 香港加油! </div>
+      <span>$ bash init.sh --default</span>
       <div id="output" v-html="outText"></div>
       <div id="10-refresh" v-if="refreshes>=10">&gt; How it feels to press F5 10 times?</div>
       <div id="20-refresh" v-if="refreshes>=20">&gt; Serious..? 10 more refreshes?</div>
@@ -134,6 +137,10 @@ export default {
       ) {
         console.log("now get outta here");
         window.open("https://mio9.sh/now-you-fuck-off", "_self");
+      } else if (this.inputText=="109"||this.inputText.toUpperCase()=="M109"||this.inputText.toUpperCase()=="M/109"){
+        this.terminalLines.push("$ " + this.inputText);
+        this.inputLine = [];
+        window.open("https://109.mio9.sh", "_blank");
       }
     }
   },
