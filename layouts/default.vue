@@ -16,14 +16,14 @@
 
       <span @click="openLink('https://109.mio9.sh')">[m/109]</span>
 
-      <span class="minor-msg">LU:180819-rev1</span>
+      <span class="minor-msg">LU:020919-rev1</span>
       
     </div>
     <div id="contact" v-if="showContact">
       <span @click="openLink('https://twitter.com/mio9_sh')">[Twitter]</span>
       <span @click="openLink('https://instagram.com/mio9.sh')">[IG]</span>
       <span @click="openLink('https://www.youtube.com/channel/UCU5-HW3G5U2ztQloUsu6qgQ')">[YouTube]</span>
-      <span @click="openLink('https://discord.gg/UYX84Za')">[Discord]</span>
+      <span @click="gotoLink('/discord')">[Discord]</span>
       <span @click="openLink('https://www.twitch.tv/miosh9')">[Twitch]</span>
       </div>
     <div id="project" v-if="showProjects">
