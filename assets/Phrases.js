@@ -52,7 +52,8 @@ export default {
     "#LiberateHongKong",
     "Say no, Say fuck to #Chinazi",
     "I want YOU, to yell out loud at 10pm",
-    "Someone's not singing the song, is that YOU?"
+    "Someone's not singing the song, is that YOU?",
+    "Beware of trash disguised as human walking around, using WeChat :)"
   ],
   m: [
     "Mysterious",
