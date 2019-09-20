@@ -10,6 +10,7 @@
       <div style="color: lime;">-------------------</div> -->
       <div style="color: red;">🔥 🇭🇰 fight against the power! </div>
       <div style="color: red;">🔥 香港加油! </div>
+      <div>&lt;&lt;願榮光歸香港&gt;&gt; </div>
       <span>$ bash init.sh --default</span>
       <div id="output" v-html="outText"></div>
       <div id="10-refresh" v-if="refreshes>=10">&gt; How it feels to press F5 10 times?</div>

@@ -16,7 +16,7 @@
 
       <span @click="openLink('https://109.mio9.sh')">[m/109]</span>
 
-      <span class="minor-msg">LU:020919-rev1</span>
+      <span class="minor-msg">LU:210919-r1</span>
       
     </div>
     <div id="contact" v-if="showContact">
@@ -30,25 +30,25 @@
       >
       <span @click="gotoLink('/raillab')">[RailLab]</span>
       <span
-        @click="showBots=!showBots"
-        v-bind:class="{active:showBots}"
+        @click="showCode=!showCode"
+        v-bind:class="{active:showCode}"
         class="menu-item"
-      >[Discord Bots]</span>
+      >[Code]</span>
 
-      <span
+      <!-- <span
         @click="showPlugins=!showPlugins"
         v-bind:class="{active:showPlugins}"
         class="menu-item"
-      >[Spigot Plugins]</span>
+      >[Spigot Plugins]</span> -->
       <!-- Bots area -->
-      <div id="bots" v-if="showBots">
-        >> Bots:
+      <div id="bots" v-if="showCode">
+        >> Coding:
         <span>[]</span>
       </div>
-      <div id="bots" v-if="showPlugins">
+      <!-- <div id="bots" v-if="showPlugins">
         >> Plugins:
         <span @click="gotoLink('/metrocard')">[MetroCard]</span>
-      </div>
+      </div> -->
     </div>
     <div>
       <span class="minor-msg" @click="refreshMIO">{{mioPhrase}}</span>
@@ -65,7 +65,7 @@ export default {
   data() {
     return {
       showProjects: false,
-      showBots: false,
+      showCode: false,
       showPlugins: false,
       showContact: false,
       mioPhrase: "M. I. O."
