@@ -47,7 +47,12 @@ export default {
     "Ngo gum hang ding d 5 mo ng wui tai dak ming :)",
     "Jeng 5 jeng?",
     "yi hau jau gum gong yea dou 5 cho wo ..",
-    "That's all for today, thank you for watching, please be sure to subscribe and turn on notification, and... see you again, next time."
+    "That's all for today, thank you for watching, please be sure to subscribe and turn on notification, and... see you again, next time.",
+    "#FreeHK",
+    "#LiberateHongKong",
+    "Say no, Say fuck to #Chinazi",
+    "I want YOU, to yell out loud at 10pm",
+    "Someone's not singing the song, is that YOU?"
   ],
   m: [
     "Mysterious",

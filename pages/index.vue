@@ -11,7 +11,7 @@
       <div style="color: red;">🔥 🇭🇰 fight against the power! </div>
       <div style="color: red;">🔥 香港加油! </div>
       <div>&lt;&lt;願榮光歸香港&gt;&gt; </div>
-      <span>$ bash init.sh --default</span>
+      <span>$ bash fallback.sh --forced</span>
       <div id="output" v-html="outText"></div>
       <div id="10-refresh" v-if="refreshes>=10">&gt; How it feels to press F5 10 times?</div>
       <div id="20-refresh" v-if="refreshes>=20">&gt; Serious..? 10 more refreshes?</div>
