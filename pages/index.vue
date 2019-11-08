@@ -7,19 +7,8 @@
       >[CRITICAL!] This stuff does not work without a keyboard, plug one in before attempting here</div>
       <!-- <div style="color: lime;">-------[!!!]-------</div>
       <div style="color: lime;">(yeet!) New discussion site had opened! Check it out @ <a href="https://109.mio9.sh">[m/109]</a></div>
-      <div style="color: lime;">-------------------</div> -->
-      <div style="color: red;">🔥 🇭🇰 fight against the power! </div>
-      <div style="color: red;">🔥 香港加油! </div>
-      <div>&lt;&lt;願榮光歸香港&gt;&gt; </div>
-      <span>$ bash fallback.sh --forced</span>
-      <div id="output" v-html="outText"></div>
-      <div id="10-refresh" v-if="refreshes>=10">&gt; How it feels to press F5 10 times?</div>
-      <div id="20-refresh" v-if="refreshes>=20">&gt; Serious..? 10 more refreshes?</div>
-      <div
-        id="40-refresh"
-        v-if="refreshes>=40"
-      >&gt; You did it 40 times already, you can just... click on the word to get a new combination...</div>
-      <div v-for="line in terminalLines" :key="line">{{line}}</div>
+      <div style="color: lime;">-------------------</div>-->
+      <div style="color: red;">[ALERT] m.109.main disconnected.</div>
       <div>$ {{inputText}}</div>
       <!-- <img src="@/assets/logo.png" alt=""> -->
     </no-ssr>
@@ -83,14 +72,14 @@ export default {
     addInput(key) {
       if (!this.excludeInput.includes(key)) {
         this.inputLine.push(key);
-        this.checkInput();
+        // this.checkInput();
       }
       if (key == "Escape") {
         this.inputLine = [];
       } else if (key == "Enter") {
         this.terminalLines.push("$ " + this.inputText);
         this.inputLine = [];
-        this.terminalLines.push("Your magic didn't work...?");
+        this.terminalLines.push("m.109.main disconnected.");
       } else if (key == "Backspace") {
         this.inputLine.pop();
       }
@@ -138,7 +127,11 @@ export default {
       ) {
         console.log("now get outta here");
         window.open("https://mio9.sh/now-you-fuck-off", "_self");
-      } else if (this.inputText=="109"||this.inputText.toUpperCase()=="M109"||this.inputText.toUpperCase()=="M/109"){
+      } else if (
+        this.inputText == "109" ||
+        this.inputText.toUpperCase() == "M109" ||
+        this.inputText.toUpperCase() == "M/109"
+      ) {
         this.terminalLines.push("$ " + this.inputText);
         this.inputLine = [];
         window.open("https://109.mio9.sh", "_blank");
