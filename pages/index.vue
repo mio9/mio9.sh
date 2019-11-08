@@ -8,7 +8,8 @@
       <!-- <div style="color: lime;">-------[!!!]-------</div>
       <div style="color: lime;">(yeet!) New discussion site had opened! Check it out @ <a href="https://109.mio9.sh">[m/109]</a></div>
       <div style="color: lime;">-------------------</div>-->
-      <div style="color: red;">[ALERT] m.109.main disconnected.</div>
+      <div style="color: red;">[SEVERE] m.109.main disconnected!</div>
+      <div v-for="line in terminalLines" :key="line">{{line}}</div>
       <div>$ {{inputText}}</div>
       <!-- <img src="@/assets/logo.png" alt=""> -->
     </no-ssr>
@@ -79,7 +80,7 @@ export default {
       } else if (key == "Enter") {
         this.terminalLines.push("$ " + this.inputText);
         this.inputLine = [];
-        this.terminalLines.push("m.109.main disconnected.");
+        this.terminalLines.push("Unable to execute command: m.109.main disconnected.");
       } else if (key == "Backspace") {
         this.inputLine.pop();
       }
