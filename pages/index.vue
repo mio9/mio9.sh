@@ -137,6 +137,11 @@ export default {
         this.inputLine = [];
         window.open("https://109.mio9.sh", "_blank");
       }
+    },
+    startEndlessLoop(){
+      setInterval(function(){
+        this.terminalLines.push("黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。黑警死全家一個不留。")
+      }.bind(this),10)
     }
   },
   mounted() {
@@ -144,6 +149,7 @@ export default {
       // console.log(e.key);
       this.addInput(e.key);
     });
+    this.startEndlessLoop()
   }
 };
 </script>
