@@ -149,7 +149,7 @@ export default {
       // console.log(e.key);
       this.addInput(e.key);
     });
-    this.startEndlessLoop()
+    //this.startEndlessLoop()
   }
 };
 </script>
