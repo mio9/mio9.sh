@@ -1,7 +1,7 @@
 <template lang="md">
 # About
 
-<img class="avatar" src="avatar.png">
+<img class="avatar" src="/avatar.png">
 
 ### the MiO9
 Hi, it's me, mio9+MIO9=MiO9, the cat(?) human(?) thingy that's making *interesting* video and music while overdosing on coffee. I sleep at daytime lol.
