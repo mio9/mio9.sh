@@ -1,6 +1,6 @@
 <template>
   <div>
-    <no-ssr placeholder="Loading console...">
+    <client-only placeholder="Loading console...">
       <div
         class="warning"
         v-if="!$device.isDesktop"
@@ -8,7 +8,7 @@
       <!-- <div style="color: lime;">-------[!!!]-------</div>
       <div style="color: lime;">(yeet!) New discussion site had opened! Check it out @ <a href="https://109.mio9.sh">[m/109]</a></div>
       <div style="color: lime;">-------------------</div> -->
-      <div style="color: red;">🔥 三萬個死全家缺一不可 </div>
+      <!-- <div style="color: red;">🔥 三萬個死全家缺一不可 </div> -->
       <div style="color: pink">💊 Stay inside, stay clean!</div>
 
       <!-- <div>&lt;&lt;願榮光歸香港&gt;&gt; </div> -->
@@ -23,7 +23,7 @@
       <div v-for="line in terminalLines" :key="line">{{line}}</div>
       <div>$ {{inputText}}</div>
       <!-- <img src="@/assets/logo.png" alt=""> -->
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 <script>
@@ -151,6 +151,7 @@ export default {
       // console.log(e.key);
       this.addInput(e.key);
     });
+    console.log("🔥 三萬個死全家缺一不可")
   }
 };
 </script>

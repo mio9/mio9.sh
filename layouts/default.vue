@@ -1,6 +1,6 @@
 <template>
   <div class="maincontainer">
-    <span id="mio" @click="gotoLink('/')">MIO9.sh</span>
+    <span id="mio" @click="gotoLink('/')">mio9.sh</span>
 
     <div id="links">
       <!-- <span
@@ -20,7 +20,7 @@
       <span @click="gotoLink('/discord')">[Discord]</span>
       
 
-      <span class="minor-msg">LU:200330 / (c) 2020 MiO9</span>
+      <span class="minor-msg">LU:200331 / (c) 2020 MiO9</span>
       
     </div>
     <div id="contact" v-if="showContact">
