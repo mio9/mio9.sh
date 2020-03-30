@@ -3,20 +3,24 @@
     <span id="mio" @click="gotoLink('/')">MIO9.sh</span>
 
     <div id="links">
-      <span
+      <!-- <span
         @click="showProjects=!showProjects"
         v-bind:class="{active:showProjects}"
         class="menu-item"
-      >[Projects]</span>
-      <span
+      >[Projects]</span> -->
+      <!-- <span
         @click="showContact=!showContact"
         v-bind:class="{active:showContact}"
         class="menu-item"
-      >[SNS]</span>
+      >[SNS]</span> -->
+      <span @click="gotoLink('/about')">[About]</span>
+      <span @click="gotoLink('/usage')">[Usage]</span>
+      <span @click="openLink('https://www.youtube.com/channel/UCU5-HW3G5U2ztQloUsu6qgQ')">[YouTube]</span>
+      <span @click="openLink('https://soundcloud.com/mio9')">[SoundCloud]</span>
+      <span @click="gotoLink('/discord')">[Discord]</span>
+      
 
-      <span @click="openLink('https://109.mio9.sh')">[m/109]</span>
-
-      <span class="minor-msg">LU:210919-r1</span>
+      <span class="minor-msg">LU:200330 / (c) 2020 MiO9</span>
       
     </div>
     <div id="contact" v-if="showContact">
@@ -28,27 +32,6 @@
       </div>
     <div id="project" v-if="showProjects">
       >
-      <span @click="gotoLink('/raillab')">[RailLab]</span>
-      <span
-        @click="showCode=!showCode"
-        v-bind:class="{active:showCode}"
-        class="menu-item"
-      >[Code]</span>
-
-      <!-- <span
-        @click="showPlugins=!showPlugins"
-        v-bind:class="{active:showPlugins}"
-        class="menu-item"
-      >[Spigot Plugins]</span> -->
-      <!-- Bots area -->
-      <div id="bots" v-if="showCode">
-        >> Coding:
-        <span>[]</span>
-      </div>
-      <!-- <div id="bots" v-if="showPlugins">
-        >> Plugins:
-        <span @click="gotoLink('/metrocard')">[MetroCard]</span>
-      </div> -->
     </div>
     <div>
       <span class="minor-msg" @click="refreshMIO">{{mioPhrase}}</span>

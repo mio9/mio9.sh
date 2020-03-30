@@ -8,10 +8,11 @@
       <!-- <div style="color: lime;">-------[!!!]-------</div>
       <div style="color: lime;">(yeet!) New discussion site had opened! Check it out @ <a href="https://109.mio9.sh">[m/109]</a></div>
       <div style="color: lime;">-------------------</div> -->
-      <div style="color: red;">🔥 🇭🇰 fight against the power! </div>
-      <div style="color: red;">🔥 香港加油! </div>
-      <div>&lt;&lt;願榮光歸香港&gt;&gt; </div>
-      <span>$ bash fallback.sh --forced</span>
+      <div style="color: red;">🔥 三萬個死全家缺一不可 </div>
+      <div style="color: pink">💊 Stay inside, stay clean!</div>
+
+      <!-- <div>&lt;&lt;願榮光歸香港&gt;&gt; </div> -->
+      <span>$ bash mio9.sh --phase 2</span>
       <div id="output" v-html="outText"></div>
       <div id="10-refresh" v-if="refreshes>=10">&gt; How it feels to press F5 10 times?</div>
       <div id="20-refresh" v-if="refreshes>=20">&gt; Serious..? 10 more refreshes?</div>

@@ -1,7 +1,7 @@
 <template>
  <div>
-   <p>Bruh you blocked popups and redirects aren't you?</p>
-   <p>anyways here ya go, a nice widget for you :D</p>
+   <p>Oof! Look like you have popups blocked!</p>
+   <p>anyways here's a nice as an invitation, welcome onboard :D</p>
    
    <iframe src="https://discordapp.com/widget?id=439668987421261824&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
  </div>

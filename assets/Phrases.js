@@ -13,7 +13,7 @@ export default {
     "There's a difficult situation: 3CV 3SS",
     "Thinking in BINARY! (binary.... binary... binary .... binary..)",
     "Look at him.... muaheheheh that's so bad, even my ships could do this better",
-    '"The destroyers, The escort ship, are all mine, EVERY SHIP IS MINE" -- Some ONE',
+    // '"The destroyers, The escort ship, are all mine, EVERY SHIP IS MINE" -- Some ONE',
     "While you're attemping to do surgery on a grape, someone's microwaving a microwave microwaving a microwave microvwaving an iPhone watching Micorwave microwaving a microwave",
     "Just let this meme die, just... let it die",
     "------------------[Separation Line]----------------------",
@@ -53,7 +53,22 @@ export default {
     "Say no, Say fuck to #Chinazi",
     "I want YOU, to yell out loud at 10pm",
     "Someone's not singing the song, is that YOU?",
-    "Beware of trash disguised as human walking around, using WeChat :)"
+    "Beware of trash disguised as human walking around, using WeChat :)",
+    "Virus here, virus there, virus everywhere",
+    "Clean your hands, 20 seconds, it's a must",
+    "I got 0 listens on Apple Music",
+    "But who would listen to the WHO? yes, just WHO",
+    "T-T-Turn up , the, Turn up DA BASS!",
+    "みおみおみおみお",
+    "みおちゃんだよ！",
+    "AAAAAaaaaaaaAAAAaAaaAaAaAaaaAAAAAaAAAaaAAAaaAAAA~~~~~ B",
+    "You REALLY think the virus comes from space? HA! Leave my page now if you do",
+    "Some red dirty country started the virus, then refuse to take the responsibility, oops!",
+    "Don't let me see your nose when you're on your mask",
+    "A L C O H O L  T I M E",
+    "mio9, MiO9, MIO9,  M I O 9",
+    "猫谷みお",
+    "Done that the last minute"
   ],
   m: [
     "Mysterious",
@@ -76,7 +91,8 @@ export default {
     "Mending",
     "Microwaveable",
     "m",
-    "Masty"
+    "Masty",
+    "Miserable"
   ],
   i: [
     "Induction",
@@ -128,7 +144,9 @@ export default {
     "Off-loader",
     "Onii-chan",
     "On-the-fly",
-    "poi?(why not)"
+    "poi?(why not)",
+    "OTT",
+    "Ozone 9"
   ],
   daisukeLyrics:
     "DAISUKE!!\n\

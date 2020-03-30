@@ -7,7 +7,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: "./mio9.sh",
+    title: "mio9.sh - Main",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -46,7 +46,7 @@ module.exports = {
   ],
 
   markdownit:{
-    linkify: true,
+    linkify: false,
     breaks: true,
     use: [
       'markdown-it-checkbox',
