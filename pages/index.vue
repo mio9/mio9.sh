@@ -9,7 +9,7 @@
       <div style="color: lime;">(yeet!) New discussion site had opened! Check it out @ <a href="https://109.mio9.sh">[m/109]</a></div>
       <div style="color: lime;">-------------------</div> -->
       <!-- <div style="color: red;">🔥 三萬個死全家缺一不可 </div> -->
-      <div style="color: pink">💊 Stay inside, stay clean!</div>
+      <div style="color: pink">💊 Stay inside, stay clean! WASH YOUR HANDS!</div>
 
       <!-- <div>&lt;&lt;願榮光歸香港&gt;&gt; </div> -->
       <span>$ bash mio9.sh --phase 2</span>
@@ -151,7 +151,9 @@ export default {
       // console.log(e.key);
       this.addInput(e.key);
     });
-    console.log("🔥 三萬個死全家缺一不可")
+    console.log("🔥 五大訴求，缺一不可，三萬個死全家缺一不可!")
+    console.log("<<願榮光歸香港>>")
+    console.log(Phrases.glory)
   }
 };
 </script>

@@ -173,5 +173,28 @@ I wanna dance with you more.\n\
 Right now, I want you're one for you.\n\
 Everytime, everywhere,\n\
 I will surely get your honest love.\n\
-DAISUKE!!"
+DAISUKE!!",
+  glory:
+    "作詞：t, 眾連登仔    作曲：thomas dgx yhl\n\
+編曲：t, bp, clk, oct tad\n\
+\n\
+何以 這土地 淚再流\n\
+何以 令眾人 亦憤恨\n\
+昂首 拒默沉 吶喊聲 響透\n\
+盼自由 歸於 這裡\n\
+\n\
+何以 這恐懼 抹不走\n\
+何以 為信念 從沒退後\n\
+何解 血在流 但邁進聲 響透\n\
+建自由 光輝 香港\n\
+\n\
+在晚星 墜落 徬徨午夜\n\
+迷霧裡 最遠處吹來 號角聲\n\
+捍自由 來齊集這裡 來全力抗對\n\
+勇氣 智慧 也永不滅\n\
+\n\
+黎明來到 要光復 這香港\n\
+同行兒女 為正義 時代革命\n\
+祈求 民主與自由 萬世都不朽\n\
+我願榮光歸香港"
 };
