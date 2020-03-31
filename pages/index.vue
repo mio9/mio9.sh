@@ -4,7 +4,7 @@
       <div
         class="warning"
         v-if="!$device.isDesktop"
-      >[CRITICAL!] This stuff does not work without a keyboard, plug one in before attempting here</div>
+      >[HOLD UP!] Commmands won't work without a keyboard, plug one in before trying the commands</div>
       <!-- <div style="color: lime;">-------[!!!]-------</div>
       <div style="color: lime;">(yeet!) New discussion site had opened! Check it out @ <a href="https://109.mio9.sh">[m/109]</a></div>
       <div style="color: lime;">-------------------</div> -->
