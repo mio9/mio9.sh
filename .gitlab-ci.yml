@@ -1,0 +1,8 @@
+before_script:
+  - docker info
+
+build_image:
+  script:
+    - docker login registry.gitlab.com -u gitlab+deploy-token-215945 -p aiKqReBjY6bZV-1pD-gn
+    - docker build -t registry.gitlab.com/mio9/mio9.sh .
+    - docker push registry.gitlab.com/mio9/mio9.sh
