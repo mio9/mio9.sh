@@ -11,5 +11,5 @@ build_image:
     - "echo ====================================="
     - docker build -t $CI_REGISTRY_IMAGE:latest .
     - docker tag $CI_REGISTRY_IMAGE:latest $CI_REGISTRY_IMAGE:$CI_BUILD_TAG
-    - docker login registry.gitlab.com -u gitlab+deploy-token-215945 -p $CI_BUILD_TOKEN
+    - docker login -u gitlab+deploy-token-215963 -p $CI_BUILD_TOKEN registry.gitlab.com 
     - docker push $CI_REGISTRY_IMAGE:$CI_BUILD_TAG
