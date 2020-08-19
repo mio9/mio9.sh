@@ -3,11 +3,13 @@ build_image:
   services:
     - docker:dind
   script:
+    - "[[ -z $CI_BUILD_TAG ]] && echo Project not tagged, skipping build && exit 0"
+   # build only when tagged
+    - "echo =========== Docker imformation ======"
     - docker version
     - docker info
-    # build only when tagged
-    - "[[ -z $CI_BUILD_TAG ]] && exit 0"
+    - "echo ====================================="
     - docker build -t $CI_REGISTRY_IMAGE:latest .
     - docker tag $CI_REGISTRY_IMAGE:latest $CI_REGISTRY_IMAGE:$CI_BUILD_TAG
-    - docker login registry.gitlab.com -u gitlab+deploy-token-215945 -p $CI_BUILD_TOKEN $CI_REGISTRY
+    - docker login registry.gitlab.com -u gitlab+deploy-token-215945 -p $CI_BUILD_TOKEN
     - docker push $CI_REGISTRY_IMAGE:$CI_BUILD_TAG
