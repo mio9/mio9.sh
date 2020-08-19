@@ -20,7 +20,7 @@
       <span @click="gotoLink('/discord')">[Discord]</span>
       
 
-      <span class="minor-msg">LU:200401 / (c) 2020 MiO9</span>
+      <span class="minor-msg">LU:200820 / (c) 2020 MiO9</span>
       
     </div>
     <div id="contact" v-if="showContact">

@@ -15,7 +15,7 @@
 > Spotify: https://open.spotify.com/track/26fpRLh06nTQDeN6Khbb60?si=GNlXjSnPRvas-ZjvcCHyxA
 
 ### 3. Will I get copyright strikes for using your tracks?
-> **Depends** - Generally, 99% of the time, you are free and safe to use my track even if you happened to forget putting credits.
+> **Depends** - When a song/release is marked as "Free to use" (or unless the song is speficially labeled copyrighted), you are free and safe to use my track even if you happened to forget putting credits.
 
 >But if your content is not included in the allowed usage, or attempting to claim my work as yours(e.g. uploading my track unmodified and claim as your own track), you ***will*** receive a copyright strike on that.
 
@@ -33,7 +33,7 @@ You are not allowed to:
 - **Claim** the track directly, as if you made the track (i.e. reposting my tracks while indicating yourself as the composer)
 - **Commercially using** the track, without written permission
 - **Directly Re-uploading** the track, while claiming it as a remix or edit
-- **Re-Distribute** the remixed/edited track to stores and streaming platforms (e.g. Spotify, Apple Music etc.)
+- **Re-Distribute** the remixed/edited track to stores and streaming platforms (e.g. Spotify, Apple Music etc.) without written permission.
 
 We reserve the right to revoke usage permission of our tracks if we find the content unaccaptable to be associated with.
 This includes, but not limited to:
@@ -45,4 +45,6 @@ This includes, but not limited to:
 
 If you want to use my track for commercial usage, or would like to repost/include my track into compilations, please contact me through [my email address](/about).
 
+
+<small>Last revivew: 2020-08-20</small>
 </template>
