@@ -1,33 +1,31 @@
 const pkg = require('./package')
 
 module.exports = {
-  mode: 'universal',
+  mode: "universal",
 
   /*
    ** Headers of the page
    */
   head: {
-    title: "mio9.sh - Main",
+    title: "MiO9.sh",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description },
-      { name: 'theme-color', content: '#202020'}
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: pkg.description },
+      { name: "theme-color", content: "#202020" }
     ],
-    link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
+    link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }]
   },
 
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: "#fff" },
 
   /*
    ** Global CSS
    */
-  css: [
-    '@/assets/fonts/fonts.css'
-  ],
+  css: ["@/assets/fonts/fonts.css"],
 
   /*
    ** Plugins to load before mounting the App
@@ -39,19 +37,22 @@ module.exports = {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    'nuxt-device-detect',
-    '@nuxtjs/markdownit'
+    "@nuxtjs/axios",
+    "@nuxtjs/pwa",
+    "nuxt-device-detect",
+    "@nuxtjs/markdownit",
+    "@nuxtjs/sitemap"
   ],
 
-  markdownit:{
+  sitemap: {
+    hostname: "https://mio9.sh",
+    exclude: ["/metrocard","/now-you-fuck-off","/raillab"]
+  },
+
+  markdownit: {
     linkify: false,
     breaks: true,
-    use: [
-      'markdown-it-checkbox',
-      'markdown-it-highlightjs'
-    ]
+    use: ["markdown-it-checkbox", "markdown-it-highlightjs"]
   },
   /*
    ** Axios module configuration
@@ -79,4 +80,4 @@ module.exports = {
     //   }
     // }
   }
-}
+};

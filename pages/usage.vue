@@ -48,3 +48,12 @@ If you want to use my track for commercial usage, or would like to repost/includ
 
 <small>Last revivew: 2020-08-20</small>
 </template>
+<script>
+export default {
+  head(){
+    return{
+      title: "Usage Policy - MiO9.sh"
+    }
+  }
+}
+</script>

@@ -20,7 +20,7 @@
       <span @click="gotoLink('/discord')">[Discord]</span>
       
 
-      <span class="minor-msg">LU:200820 / (c) 2020 MiO9</span>
+      <span class="minor-msg">LU:200820a / (c) 2020 MiO9</span>
       
     </div>
     <div id="contact" v-if="showContact">
@@ -28,7 +28,7 @@
       <span @click="openLink('https://instagram.com/mio9.sh')">[IG]</span>
       <span @click="openLink('https://www.youtube.com/channel/UCU5-HW3G5U2ztQloUsu6qgQ')">[YouTube]</span>
       <span @click="gotoLink('/discord')">[Discord]</span>
-      <span @click="openLink('https://www.twitch.tv/miosh9')">[Twitch]</span>
+      <span @click="openLink('https://www.twitch.tv/mio9')">[Twitch]</span>
       </div>
     <div id="project" v-if="showProjects">
       >
