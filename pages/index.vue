@@ -6,14 +6,14 @@
         v-if="!$device.isDesktop"
       >[HOLD UP!] Commmands won't work without a keyboard, plug one in before trying the commands</div>
       <div style="color: lime;">-------[!!!]-------</div>
-      <div style="color: lime;">New album "Re:Light" has released! Check it out @ <a href="https://songwhip.com/mio9/relight">[everywhere]</a></div>
+      <div style="color: lime;">New album "Re:Light" has released! Check it out @ <a href="https://songwhip.com/mio9/relight">[here]</a></div>
       <div style="color: lime;">-------------------</div>
       <div style="color: red;">🔥 三萬thx </div>
       <div style="color: pink">💊 Stay inside, stay clean! WASH YOUR HANDS!</div>
 
       <!-- <div>&lt;&lt;願榮光歸香港&gt;&gt; </div> -->
       <span>$ bash mio9.sh --force --silent</span>
-      <span>[INFO] Hold up, MiO9 cannot be silenced, good luck</span>
+      <div>[INFO] Hold up, MiO9 cannot be silenced, good luck</div>
       <div id="output" v-html="outText"></div>
       <div id="10-refresh" v-if="refreshes>=10">&gt; How it feels to press F5 10 times?</div>
       <div id="20-refresh" v-if="refreshes>=20">&gt; Serious..? 10 more refreshes?</div>
