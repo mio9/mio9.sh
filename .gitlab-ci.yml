@@ -1,14 +1,17 @@
-before_script:
-  - "[[ -z $CI_BUILD_TAG ]] && echo Project not tagged, skipping build && exit 0"
+# before_script:
+#   - "[[ -z $CI_BUILD_TAG ]] && echo Project not tagged, skipping build && exit 0"
 
 pages:
   image: node:14-alpine
+  cache:
+    paths:
+    - node_modules/
   script:
     - npm install
     - npm run generate
   artifacts:
     paths:
-      - dist
+      - public
 
 
 build_image:
