@@ -1,9 +1,21 @@
+before_script:
+  - "[[ -z $CI_BUILD_TAG ]] && echo Project not tagged, skipping build && exit 0"
+
+pages:
+  image: node:14-alpine
+  script:
+    - npm run generate
+  artifacts:
+    paths:
+      - dist
+
+      
 build_image:
   image: docker
   services:
     - docker:dind
   script:
-    - "[[ -z $CI_BUILD_TAG ]] && echo Project not tagged, skipping build && exit 0"
+    
    # build only when tagged
     - "echo =========== Docker imformation ======"
     - docker version
