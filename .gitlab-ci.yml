@@ -14,19 +14,19 @@ pages:
       - public
 
 
-build_image:
-  image: docker
-  services:
-    - docker:dind
-  script:
+# build_image:
+#   image: docker
+#   services:
+#     - docker:dind
+#   script:
     
-   # build only when tagged
-    - "echo =========== Docker imformation ======"
-    - docker version
-    - docker info
-    - "echo ====================================="
-    - docker build -t $CI_REGISTRY_IMAGE:latest .
-    - docker tag $CI_REGISTRY_IMAGE:latest $CI_REGISTRY_IMAGE:$CI_BUILD_TAG
-    - echo $CI_JOB_TOKEN
-    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com 
-    - docker push $CI_REGISTRY_IMAGE:$CI_BUILD_TAG
+#    # build only when tagged
+#     - "echo =========== Docker imformation ======"
+#     - docker version
+#     - docker info
+#     - "echo ====================================="
+#     - docker build -t $CI_REGISTRY_IMAGE:latest .
+#     - docker tag $CI_REGISTRY_IMAGE:latest $CI_REGISTRY_IMAGE:$CI_BUILD_TAG
+#     - echo $CI_JOB_TOKEN
+#     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com 
+#     - docker push $CI_REGISTRY_IMAGE:$CI_BUILD_TAG
