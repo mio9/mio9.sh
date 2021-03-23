@@ -8,12 +8,11 @@
       <div style="color: lime;">-------[!!!]-------</div>
       <div style="color: lime;">New album "Re:Light" has released! Check it out @ <a href="https://songwhip.com/mio9/relight">[here]</a></div>
       <div style="color: lime;">-------------------</div>
-      <div style="color: red;">🔥 三萬thx </div>
-      <div style="color: pink">💊 Stay inside, stay clean! WASH YOUR HANDS!</div>
+      <div style="color: pink">It's coming down tho... it'S COMING DOWNN~ AAAAAAAAAAAAAAAAAAAA!!</div>
 
       <!-- <div>&lt;&lt;願榮光歸香港&gt;&gt; </div> -->
-      <span>$ bash mio9.sh --force --silent</span>
-      <div>[INFO] Hold up, MiO9 cannot be silenced, good luck</div>
+      <span>$ bash mio9.sh --caffine-level=9999</span>
+      <div>[INFO] Oh no that's uLtRA ☆ hYPeR ☆ aaaaAaaAAAAaaaaAAaa</div>
       <div id="output" v-html="outText"></div>
       <div id="10-refresh" v-if="refreshes>=10">&gt; How it feels to press F5 10 times?</div>
       <div id="20-refresh" v-if="refreshes>=20">&gt; Serious..? 10 more refreshes?</div>
@@ -21,6 +20,10 @@
         id="40-refresh"
         v-if="refreshes>=40"
       >&gt; You did it 40 times already, you can just... click on the word to get a new combination...</div>
+      <div
+        id="80-refresh"
+        v-if="refreshes>=80"
+      >&gt; What dafuq? what's wrong with you? 80 times seriously?</div>
       <div v-for="line in terminalLines" :key="line">{{line}}</div>
       <div>$ {{inputText}}</div>
       <!-- <img src="@/assets/logo.png" alt=""> -->
@@ -152,7 +155,7 @@ export default {
       // console.log(e.key);
       this.addInput(e.key);
     });
-    console.log("🔥 光復香港，三萬thanks!")
+    // console.log("🔥 光復香港，三萬thanks!")
     console.log("<<願榮光歸香港>>")
     console.log(Phrases.glory)
   }
