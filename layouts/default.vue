@@ -13,31 +13,50 @@
         v-bind:class="{active:showContact}"
         class="menu-item"
       >[SNS]</span> -->
-      <span @click="gotoLink('/about')">[About]</span>
-      <span @click="gotoLink('/usage')">[Usage]</span>
-      <span @click="openLink('https://www.youtube.com/channel/UCU5-HW3G5U2ztQloUsu6qgQ')">[YouTube]</span>
-      <span @click="openLink('https://soundcloud.com/mio9')">[SoundCloud]</span>
-      <span @click="gotoLink('/discord')">[Discord]</span>
-      
+      <span><a href="/about" class="navbar-item">[About]</a></span>
+      <span><a href="/usage" class="navbar-item">[Usage]</a></span>
+      <span
+        ><a
+          href="https://www.youtube.com/channel/UCU5-HW3G5U2ztQloUsu6qgQ"
+          class="navbar-item"
+          >[YouTube]</a
+        ></span
+      >
+      <span
+        ><a href="https://soundcloud.com/mio9" class="navbar-item"
+          >[SoundCloud]</a
+        ></span
+      >
+      <span><a href="/discord" class="navbar-item">[Discord]</a></span>
+      <span
+        ><a
+          class="navbar-item"
+          v-bind:class="{ active: showProjects }"
+          @click="showProjects = !showProjects"
+          >[Projects]</a
+        ></span
+      >
 
-      <span class="minor-msg">LU:200820b / (c) 2020 MiO9</span>
-      
+      <span class="minor-msg">LU:210323 / (c) 2020 MiO9</span>
     </div>
-    <div id="contact" v-if="showContact">
+    <!-- <div id="contact" v-if="showContact">
       <span @click="openLink('https://twitter.com/mio9_sh')">[Twitter]</span>
       <span @click="openLink('https://instagram.com/mio9.sh')">[IG]</span>
-      <span @click="openLink('https://www.youtube.com/channel/UCU5-HW3G5U2ztQloUsu6qgQ')">[YouTube]</span>
+      <span
+        @click="
+          openLink('https://www.youtube.com/channel/UCU5-HW3G5U2ztQloUsu6qgQ')
+        "
+        >[YouTube]</span
+      >
       <span @click="gotoLink('/discord')">[Discord]</span>
       <span @click="openLink('https://www.twitch.tv/mio9')">[Twitch]</span>
-      </div>
-    <div id="project" v-if="showProjects">
-      >
-    </div>
+    </div> -->
+    <div id="project" v-if="showProjects">> Coming soon.</div>
     <div>
-      <span class="minor-msg" @click="refreshMIO">{{mioPhrase}}</span>
+      <span class="minor-msg" @click="refreshMIO">{{ mioPhrase }}</span>
     </div>
-    <hr>
-    <nuxt/>
+    <hr />
+    <nuxt />
   </div>
 </template>
 
@@ -51,13 +70,13 @@ export default {
       showCode: false,
       showPlugins: false,
       showContact: false,
-      mioPhrase: "M. I. O."
+      mioPhrase: "M. I. O.",
     };
   },
   computed: {
     refreshes() {
       return parseInt(sessionStorage.getItem("refreshes") || 0) || 0;
-    }
+    },
   },
   methods: {
     openLink(link) {
@@ -77,53 +96,16 @@ export default {
         Phrases.i[this.getRandomInt(Phrases.i.length)] +
         " " +
         Phrases.o[this.getRandomInt(Phrases.o.length)];
-    }
+    },
   },
   mounted() {
     let refreshes = this.refreshes;
     sessionStorage.setItem("refreshes", ++refreshes);
     this.refreshMIO();
-  }
+  },
 };
 </script>
 
 <style>
-.maincontainer {
-  font-family: "Roboto Mono", monospace;
-  /* font-size: 20px; */
-  text-align: left;
-  color: #fefefe;
-  margin-left: 60px;
-  margin-right: 60px;
-}
-body {
-  background-color: #202020;
-}
-#mio {
-  font-size: 60px;
-  font-family: "Major Mono Display", monospace;
-}
-.minor-msg {
-  font-size: 11px;
-  color: darkgray;
-}
-.menu-item.active {
-  color: aqua;
-}
-a{
-  color: lightskyblue;
-}
-h1{
-  font-size: 30px;
-}
-iframe{
-  border-style: solid;
-}
-hr{
-  border: 1.5px solid #cccccc;
-}
-code{
-  background: #303030;
-  padding: 10px;
-}
+@import url("~/assets/css/style.css");
 </style>

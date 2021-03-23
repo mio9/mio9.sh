@@ -1,12 +1,11 @@
-const pkg = require('./package')
+const pkg = require("./package");
 
 module.exports = {
   mode: "universal",
 
   generate: {
-    dir: 'public'
+    dir: "public"
   },
-
 
   /*
    ** Headers of the page
@@ -49,9 +48,19 @@ module.exports = {
     "@nuxtjs/sitemap"
   ],
 
+  buildModules: ["@nuxtjs/fontawesome"],
+
+  fontawesome: {
+    component: "fa",
+    icons: {
+      solid: true,
+      brands: true
+    }
+  },
+
   sitemap: {
     hostname: "https://mio9.sh",
-    exclude: ["/metrocard","/now-you-fuck-off","/raillab"]
+    exclude: ["/metrocard", "/now-you-fuck-off", "/raillab"]
   },
 
   markdownit: {

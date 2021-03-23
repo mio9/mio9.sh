@@ -1,0 +1,52 @@
+:root{
+  --main-text-color: #fefefe;
+  --minor-text-color: darkgray;
+}
+
+.maincontainer {
+  font-family: "Roboto Mono", monospace;
+  /* font-size: 20px; */
+  text-align: left;
+  color: var(--main-text-color);
+  margin-left: 60px;
+  margin-right: 60px;
+}
+body {
+  background-color: #202020;
+}
+#mio {
+  font-size: 60px;
+  font-family: "Major Mono Display", monospace;
+}
+.minor-msg {
+  font-size: 11px;
+  color: var(--minor-text-color)
+}
+.navbar-item.active {
+  color: aqua;
+}
+a{
+  color: lightskyblue;
+  text-decoration: none;
+}
+a.navbar-item{
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+h1{
+  font-size: 30px;
+}
+h1.error-code{
+  font-size: 60px;
+}
+iframe{
+  border-style: solid;
+}
+hr{
+  border: 1.5px solid #cccccc;
+  background-color: #cccccc;
+}
+code{
+  background: #303030;
+  padding: 10px;
+}

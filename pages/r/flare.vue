@@ -1,6 +1,5 @@
 <template>
  <div>
-
    Wait a sec , taking you there...
  </div>
 
@@ -8,7 +7,7 @@
 <script>
 export default {
   beforeMount(){
-    window.open("https://distrokid.com/hyperfollow/mio9/flare", "_self");
+    window.open("https://songwhip.com/mio9/flare", "_self");
   }
 }
 </script>

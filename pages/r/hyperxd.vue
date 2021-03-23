@@ -8,7 +8,7 @@
 <script>
 export default {
   beforeMount(){
-    window.open("https://distrokid.com/hyperfollow/mio9/ultra--hyper--xd", "_self");
+    window.open("https://songwhip.com/mio9/ultra-hyper-xd", "_self");
   }
 }
 </script>

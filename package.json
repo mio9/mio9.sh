@@ -16,6 +16,7 @@
     "@feathersjs/configuration": "^2.0.6",
     "@feathersjs/express": "^1.3.1",
     "@feathersjs/feathers": "^3.3.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@nuxtjs/axios": "^5.9.6",
     "@nuxtjs/markdownit": "^1.2.9",
     "@nuxtjs/pwa": "^2.6.0",
@@ -30,7 +31,10 @@
     "stylus-loader": "^3.0.2"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@nuxtjs/eslint-config": "^0.0.1",
+    "@nuxtjs/fontawesome": "^1.1.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^5.15.1",
     "eslint-config-prettier": "^4.3.0",
