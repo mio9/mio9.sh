@@ -258,7 +258,7 @@ export default {
       this.underscore = false;
     });
     //set timer for the underscore
-    window.setInterval(() => {
+    setInterval(() => {
       this.underscore = !this.underscore;
     }, 800);
   },
