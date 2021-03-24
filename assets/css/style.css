@@ -1,4 +1,4 @@
-:root{
+:root {
   --main-text-color: #fefefe;
   --minor-text-color: darkgray;
 }
@@ -8,8 +8,7 @@
   /* font-size: 20px; */
   text-align: left;
   color: var(--main-text-color);
-  margin-left: 60px;
-  margin-right: 60px;
+  margin: 0 3.5vw;
 }
 body {
   background-color: #202020;
@@ -20,33 +19,47 @@ body {
 }
 .minor-msg {
   font-size: 11px;
-  color: var(--minor-text-color)
+  color: var(--minor-text-color);
 }
 .navbar-item.active {
   color: aqua;
 }
-a{
+a {
   color: lightskyblue;
   text-decoration: none;
 }
-a.navbar-item{
+a.navbar-item {
   color: var(--main-text-color);
   text-decoration: none;
 }
-h1{
+h1 {
   font-size: 30px;
 }
-h1.error-code{
+h1.error-code {
   font-size: 60px;
 }
-iframe{
+iframe {
   border-style: solid;
 }
-hr{
+hr {
   border: 1.5px solid #cccccc;
   background-color: #cccccc;
 }
-code{
+code {
   background: #303030;
   padding: 10px;
+}
+div#console {
+  margin-bottom: 40px;
+}
+div.album-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+div.album-container iframe {
+  height: 150px;
+  width: 150px;
+  border: none;
 }

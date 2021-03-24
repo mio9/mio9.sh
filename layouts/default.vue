@@ -37,7 +37,7 @@
         ></span
       >
 
-      <span class="minor-msg">LU:210323 / (c) 2020 MiO9</span>
+      <span class="minor-msg">LU:210324 / (c) 2020 MiO9</span>
     </div>
     <!-- <div id="contact" v-if="showContact">
       <span @click="openLink('https://twitter.com/mio9_sh')">[Twitter]</span>
@@ -51,7 +51,11 @@
       <span @click="gotoLink('/discord')">[Discord]</span>
       <span @click="openLink('https://www.twitch.tv/mio9')">[Twitch]</span>
     </div> -->
-    <div id="project" v-if="showProjects">> Coming soon.</div>
+    <div id="project" v-if="showProjects">> <span
+        ><a href="/board" class="navbar-item"
+          >[FreeBoard]</a
+        ></span
+      ></div>
     <div>
       <span class="minor-msg" @click="refreshMIO">{{ mioPhrase }}</span>
     </div>
