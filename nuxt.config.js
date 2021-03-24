@@ -7,6 +7,8 @@ module.exports = {
     dir: "public"
   },
 
+  target: 'static',
+
   /*
    ** Headers of the page
    */
