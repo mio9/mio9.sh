@@ -1,8 +1,11 @@
 # before_script:
 #   - "[[ -z $CI_BUILD_TAG ]] && echo Project not tagged, skipping build && exit 0"
+stages:
+  - build
 
 pages:
   image: node:14-alpine
+  stage: build
   cache:
     paths:
     - node_modules/
