@@ -18,7 +18,7 @@
         </div>
 
         <!-- <div>&lt;&lt;願榮光歸香港&gt;&gt; </div> -->
-        <span>sh-{{sh_ver}}$ bash mio9.sh --caffine-level=9999</span>
+        <span>sh-{{ sh_ver }}$ bash mio9.sh --caffine-level=9999</span>
         <div>[INFO] Oh no that's uLtRA ☆ hYPeR ☆ aaaaAaaAAAAaaaaAAaa</div>
         <div id="output" v-html="outText"></div>
         <div id="10-refresh" v-if="refreshes >= 10">
@@ -35,7 +35,9 @@
           &gt; What dafuq? what's wrong with you? 80 times seriously?
         </div>
         <div v-for="line in terminalLines" :key="line">{{ line }}</div>
-        <div>sh-{{sh_ver}}$ {{ inputText }} <span v-show="underscore">_</span></div>
+        <div>
+          sh-{{ sh_ver }}$ {{ inputText }} <span v-show="underscore">_</span>
+        </div>
         <!-- <img src="@/assets/logo.png" alt=""> -->
       </client-only>
     </div>
@@ -250,11 +252,15 @@ export default {
     });
     console.log("<<願榮光歸香港>>");
     console.log(Phrases.glory);
-    
+  },
+  created() {
+    this.$nextTick(function () {
+      this.underscore = false;
+    });
     //set timer for the underscore
-    setInterval(()=>{
-      this.underscore=!this.underscore;
-    },800)
+    window.setInterval(() => {
+      this.underscore = !this.underscore;
+    }, 800);
   },
 };
 </script>

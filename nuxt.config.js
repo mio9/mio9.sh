@@ -1,10 +1,11 @@
 const pkg = require("./package");
 
 module.exports = {
-  mode: "universal",
-
   generate: {
-    dir: "public"
+    dir: "public",
+    minify: {
+      collapseWhitespace: false
+    }
   },
 
   target: "static",
@@ -81,7 +82,6 @@ module.exports = {
    ** Build configuration
    */
   build: {
-
     /*
      ** You can extend webpack config here
      */
