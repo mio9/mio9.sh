@@ -3,9 +3,6 @@ const pkg = require("./package");
 module.exports = {
   generate: {
     dir: "public",
-    minify: {
-      collapseWhitespace: false
-    }
   },
 
   target: "static",

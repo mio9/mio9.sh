@@ -35,7 +35,9 @@
           &gt; What dafuq? what's wrong with you? 80 times seriously?
         </div>
         <div v-for="line in terminalLines" :key="line">{{ line }}</div>
-        <div>sh-{{ sh_ver }}$ {{ inputText }}</div>
+        <div>
+          sh-{{ sh_ver }}$ {{ inputText }} <span v-show="underscore">_</span>
+        </div>
         <!-- <img src="@/assets/logo.png" alt=""> -->
       </client-only>
     </div>
@@ -77,44 +79,6 @@
         ></iframe
       >
     </div>
-    <iframe
-      width="100%"
-      height="450"
-      scrolling="no"
-      frameborder="no"
-      allow="autoplay"
-      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1231539586&color=%23303030&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-    ></iframe>
-    <div
-      style="
-        font-size: 10px;
-        color: #cccccc;
-        line-break: anywhere;
-        word-break: normal;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-          Garuda, Verdana, Tahoma, sans-serif;
-        font-weight: 100;
-      "
-    >
-      <a
-        href="https://soundcloud.com/mio9"
-        title="MIO9"
-        target="_blank"
-        style="color: #cccccc; text-decoration: none"
-        >MIO9</a
-      >
-      ·
-      <a
-        href="https://soundcloud.com/mio9/sets/latest-tracks"
-        title="Latest tracks"
-        target="_blank"
-        style="color: #cccccc; text-decoration: none"
-        >Latest tracks</a
-      >
-    </div>
   </div>
 </template>
 <script>
@@ -124,6 +88,7 @@ export default {
   data() {
     return {
       sh_ver: "3.24",
+      underscore: true,
       terminalLines: [],
       inputLine: [],
 
@@ -249,6 +214,15 @@ export default {
     });
     console.log("<<願榮光歸香港>>");
     console.log(Phrases.glory);
+    //set timer for the underscore
+    setInterval(() => {
+      this.underscore = !this.underscore;
+    }, 800);
+  },
+  created() {
+    this.$nextTick(function () {
+      this.underscore = false;
+    });
   },
 };
 </script>
