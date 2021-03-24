@@ -35,9 +35,7 @@
           &gt; What dafuq? what's wrong with you? 80 times seriously?
         </div>
         <div v-for="line in terminalLines" :key="line">{{ line }}</div>
-        <div>
-          sh-{{ sh_ver }}$ {{ inputText }} <span v-show="underscore">_</span>
-        </div>
+        <div>sh-{{ sh_ver }}$ {{ inputText }}</div>
         <!-- <img src="@/assets/logo.png" alt=""> -->
       </client-only>
     </div>
@@ -126,7 +124,6 @@ export default {
   data() {
     return {
       sh_ver: "3.24",
-      underscore: true,
       terminalLines: [],
       inputLine: [],
 
@@ -252,15 +249,6 @@ export default {
     });
     console.log("<<願榮光歸香港>>");
     console.log(Phrases.glory);
-  },
-  created() {
-    this.$nextTick(function () {
-      this.underscore = false;
-    });
-    //set timer for the underscore
-    setInterval(() => {
-      this.underscore = !this.underscore;
-    }, 800);
   },
 };
 </script>
