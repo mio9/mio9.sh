@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="console">
-      🌸 WELCOME TO MIO9'S FAMILY 🌸
+      🌸WELCOME TO MIO9'S FAMILY 🌸
       <client-only placeholder="Loading console...">
         <div class="warning" v-if="!$device.isDesktop">
           [HOLD UP!] Commmands won't work without a keyboard, plug one in before

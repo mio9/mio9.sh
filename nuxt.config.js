@@ -7,7 +7,7 @@ module.exports = {
     dir: "public"
   },
 
-  target: 'static',
+  target: "static",
 
   /*
    ** Headers of the page
@@ -81,6 +81,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
+
     /*
      ** You can extend webpack config here
      */
