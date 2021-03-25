@@ -224,6 +224,15 @@ export default {
       this.underscore = false;
     });
   },
+  created() {
+    this.$nextTick(function () {
+      this.underscore = false;
+    });
+    //set timer for the underscore
+    setInterval(() => {
+      this.underscore = !this.underscore;
+    }, 800);
+  },
 };
 </script>
 <style>
