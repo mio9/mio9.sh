@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import Discography from "@/assets/DIscography";
+import Discography from "@/assets/Discography";
 export default {
   computed: {
     listing() {
