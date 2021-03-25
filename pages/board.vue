@@ -6,6 +6,10 @@
 
 <script>
 export default {
-  
+  head() {
+    return {
+      title: "Message Board - MiO9.sh",
+    };
+  },
 }
 </script>

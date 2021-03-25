@@ -1,7 +1,7 @@
 <template lang="md">
 # About
 
-<img class="avatar" src="/avatar.png">
+<img class="avatar" src="/avatar.png" >
 
 ### The MiO9
 I'm the cat(?) human(?) thingy that's making *interesting* video and music while overdosing on coffee. Discovering new stuff and breaking out of the box is my daily routine, just to bring more fun to my life and so to you.
@@ -70,6 +70,7 @@ export default {
   head() {
     return {
       title: "About - MiO9.sh",
+      meta: [{ hid: "description", name: "description" ,content:"MiO9, the music producer, the rhythm gamer, and the crazy idea generating cat that lives on high caffine."}],
     };
   },
 };

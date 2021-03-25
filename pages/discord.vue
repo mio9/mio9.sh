@@ -1,25 +1,25 @@
 <template>
  <div>
-   <p>Oof! Look like you have popups blocked!</p>
-   <p>anyways here's a nice invitation, welcome onboard :D</p>
+   <p>Welcome onboard our discord server :D</p>
    <client-only>
-   <iframe src="https://discordapp.com/widget?id=439668987421261824&theme=dark" seamless></iframe>
-   </client-only>
+   <iframe src="https://discord.com/widget?id=439668987421261824&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></client-only>
  </div>
  
     
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: "Discord - MiO9.sh",
+    };
+  },
   data() {
-    return {};
+    return {
+      widget:{}
+    };
   },
-  computed: {
-    
-  },
-  mounted(){
-    window.open("https://discord.gg/UYX84Za","_blank")
-  }
+  
 };
 </script>
 <style>

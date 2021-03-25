@@ -1,6 +1,6 @@
 <template>
   <div class="maincontainer">
-    <span id="mio" @click="gotoLink('/')">mio9.sh</span>
+    <h1 id="mio" @click="gotoLink('/')">mio9.sh</h1>
 
     <div id="links">
       <!-- <span
@@ -13,8 +13,8 @@
         v-bind:class="{active:showContact}"
         class="menu-item"
       >[SNS]</span> -->
-      <span><a href="/about" class="navbar-item">[About]</a></span>
-      <span><a href="/usage" class="navbar-item">[Usage]</a></span>
+      <span><NuxtLink to="/about" class="navbar-item">[About]</NuxtLink></span>
+      <span><NuxtLink to="/usage" class="navbar-item">[Usage]</NuxtLink></span>
       <span
         ><a
           href="https://www.youtube.com/channel/UCU5-HW3G5U2ztQloUsu6qgQ"
@@ -27,7 +27,9 @@
           >[SoundCloud]</a
         ></span
       >
-      <span><a href="/discord" class="navbar-item">[Discord]</a></span>
+      <span
+        ><NuxtLink to="/discord" class="navbar-item">[Discord]</NuxtLink></span
+      >
       <span
         ><a
           class="navbar-item"
@@ -51,11 +53,9 @@
       <span @click="gotoLink('/discord')">[Discord]</span>
       <span @click="openLink('https://www.twitch.tv/mio9')">[Twitch]</span>
     </div> -->
-    <div id="project" v-if="showProjects">> <span
-        ><a href="/board" class="navbar-item"
-          >[FreeBoard]</a
-        ></span
-      ></div>
+    <div id="project" v-if="showProjects">
+      > <span><a href="/board" class="navbar-item">[FreeBoard]</a></span>
+    </div>
     <div>
       <span class="minor-msg" @click="refreshMIO">{{ mioPhrase }}</span>
     </div>

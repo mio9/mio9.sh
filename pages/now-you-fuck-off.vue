@@ -23,6 +23,11 @@
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: "Yea yea yea just get dafuq out",
+    };
+  },
   name: "FuckOff",
   data() {
     return {};

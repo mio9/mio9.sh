@@ -52,7 +52,9 @@ If you want to use my track for commercial usage, or would like to repost/includ
 export default {
   head(){
     return{
-      title: "Usage Policy - MiO9.sh"
+      title: "Usage Policy - MiO9.sh",
+      meta: [{ hid: "description", name: "description" ,content:"Find where and when you could use my music, how copyright handles and how you could use them "}],
+    
     }
   }
 }

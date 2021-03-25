@@ -14,6 +14,7 @@ body {
   background-color: #202020;
 }
 #mio {
+  all: unset;
   font-size: 60px;
   font-family: "Major Mono Display", monospace;
 }
@@ -28,7 +29,7 @@ a {
   color: lightskyblue;
   text-decoration: none;
 }
-a.navbar-item {
+a.navbar-item, .nuxt-link.navbar-item {
   color: var(--main-text-color);
   text-decoration: none;
 }
