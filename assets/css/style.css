@@ -61,5 +61,6 @@ div.album-container {
 div.album-container iframe {
   height: 150px;
   width: 150px;
+  padding: 4px;
   border: none;
 }

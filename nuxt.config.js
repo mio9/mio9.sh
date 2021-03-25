@@ -5,6 +5,8 @@ module.exports = {
     dir: "public",
   },
 
+  components: true,
+
   target: "static",
 
   /*

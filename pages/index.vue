@@ -2,19 +2,21 @@
   <div>
     <div id="console">
       🌸WELCOME TO MIO9'S FAMILY 🌸
-      <client-only placeholder="Loading console...">
+      <div style="color: lime">-------[!!!]-------</div>
+      <div style="color: lime">
+        New album "Re:Light" has released! Check it out @
+        <a href="https://songwhip.com/mio9/relight">[here]</a>
+      </div>
+      <div style="color: lime">-------------------</div>
+      
+      <div style="color: pink">
+        It's coming down tho... it'S COMING DOWNN~ AAAAAAAAAAAAAAAAAAAA!!<br>
+        Stay tuned!
+      </div>
+      <client-only placeholder="Spinning up maximum craziness...!">
         <div class="warning" v-if="!$device.isDesktop">
           [HOLD UP!] Commmands won't work without a keyboard, plug one in before
           trying the commands
-        </div>
-        <div style="color: lime">-------[!!!]-------</div>
-        <div style="color: lime">
-          New album "Re:Light" has released! Check it out @
-          <a href="https://songwhip.com/mio9/relight">[here]</a>
-        </div>
-        <div style="color: lime">-------------------</div>
-        <div style="color: pink">
-          It's coming down tho... it'S COMING DOWNN~ AAAAAAAAAAAAAAAAAAAA!!
         </div>
 
         <!-- <div>&lt;&lt;願榮光歸香港&gt;&gt; </div> -->
@@ -42,7 +44,82 @@
       </client-only>
     </div>
     <hr />
-    
+    <client-only>
+      <TextDiscography slot="placeholder" />
+      <div class="album-container">
+        <iframe
+          src="https://bandcamp.com/EmbeddedPlayer/album=315346018/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+          seamless
+          ><a href="http://mio9.bandcamp.com/album/re-light"
+            >Re:Light by MiO9, RegZ</a
+          ></iframe
+        >
+        <iframe
+          src="https://bandcamp.com/EmbeddedPlayer/track=843483581/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+          seamless
+          ><a href="http://mio9.bandcamp.com/track/voyage"
+            >Voyage by MiO9, TACA Music</a
+          ></iframe
+        >
+        <iframe
+          src="https://bandcamp.com/EmbeddedPlayer/track=469524244/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+          seamless
+          ><a href="http://mio9.bandcamp.com/track/ultra-hyper-xd"
+            >ULTRA * HYPER * XD by MIO9</a
+          ></iframe
+        >
+        <iframe
+          src="https://bandcamp.com/EmbeddedPlayer/track=2815041959/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+          seamless
+          ><a href="http://mio9.bandcamp.com/track/nameless-dimension"
+            >Nameless Dimension by mio9, RegZ</a
+          ></iframe
+        >
+        <iframe
+          src="https://bandcamp.com/EmbeddedPlayer/track=4067402184/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+          seamless
+          ><a href="http://mio9.bandcamp.com/track/flare"
+            >Flare by MIO9</a
+          ></iframe
+        >
+      </div>
+      <iframe
+        width="100%"
+        height="450"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1231539586&color=%23b6b6b6&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
+      <div
+        style="
+          font-size: 10px;
+          color: #cccccc;
+          line-break: anywhere;
+          word-break: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-weight: 100;
+        "
+      >
+        <a
+          href="https://soundcloud.com/mio9"
+          title="MIO9"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >MIO9</a
+        >
+        ·
+        <a
+          href="https://soundcloud.com/mio9/sets/latest-tracks"
+          title="Latest tracks"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Latest tracks</a
+        >
+      </div>
+    </client-only>
   </div>
 </template>
 <script>
@@ -110,7 +187,7 @@ export default {
       if (key == "Escape") {
         this.inputLine = [];
       } else if (key == "Enter") {
-        this.terminalLines.push("$ " + this.inputText);
+        this.terminalLines.push("sh-" + this.sh_ver + "$ " + this.inputText);
         this.inputLine = [];
         this.terminalLines.push("Your magic didn't work...?");
       } else if (key == "Backspace") {
@@ -181,21 +258,7 @@ export default {
     //set timer for the underscore
     setInterval(() => {
       this.underscore = !this.underscore;
-    }, 800);
-  },
-  created() {
-    this.$nextTick(function () {
-      this.underscore = false;
-    });
-  },
-  created() {
-    this.$nextTick(function () {
-      this.underscore = false;
-    });
-    //set timer for the underscore
-    setInterval(() => {
-      this.underscore = !this.underscore;
-    }, 800);
+    }, 500);
   },
 };
 </script>
