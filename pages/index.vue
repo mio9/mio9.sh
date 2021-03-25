@@ -42,43 +42,7 @@
       </client-only>
     </div>
     <hr />
-    <div class="album-container">
-      <iframe
-        src="https://bandcamp.com/EmbeddedPlayer/album=315346018/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
-        seamless
-        ><a href="http://mio9.bandcamp.com/album/re-light"
-          >Re:Light by MiO9, RegZ</a
-        ></iframe
-      >
-      <iframe
-        src="https://bandcamp.com/EmbeddedPlayer/track=843483581/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
-        seamless
-        ><a href="http://mio9.bandcamp.com/track/voyage"
-          >Voyage by MiO9, TACA Music</a
-        ></iframe
-      >
-      <iframe
-        src="https://bandcamp.com/EmbeddedPlayer/track=469524244/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
-        seamless
-        ><a href="http://mio9.bandcamp.com/track/ultra-hyper-xd"
-          >ULTRA * HYPER * XD by MIO9</a
-        ></iframe
-      >
-      <iframe
-        src="https://bandcamp.com/EmbeddedPlayer/track=2815041959/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
-        seamless
-        ><a href="http://mio9.bandcamp.com/track/nameless-dimension"
-          >Nameless Dimension by mio9, RegZ</a
-        ></iframe
-      >
-      <iframe
-        src="https://bandcamp.com/EmbeddedPlayer/track=4067402184/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
-        seamless
-        ><a href="http://mio9.bandcamp.com/track/flare"
-          >Flare by MIO9</a
-        ></iframe
-      >
-    </div>
+    
   </div>
 </template>
 <script>

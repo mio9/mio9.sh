@@ -20,12 +20,43 @@ Originals and remixes are done irregularly, but I'm always open for request comm
 
 
 <client-only placeholder="Loading tracks and albums">
-  <iframe style="border: 0; width: 250px; height: 250px;" src="https://bandcamp.com/EmbeddedPlayer/album=315346018/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://mio9.bandcamp.com/album/re-light">Re:Light by MiO9, RegZ</a></iframe>
-  <iframe style="border: 0; width: 250px; height: 250px;" src="https://bandcamp.com/EmbeddedPlayer/track=843483581/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://mio9.bandcamp.com/track/voyage">Voyage by MiO9, TACA Music</a></iframe>
-  <iframe style="border: 0; width: 250px; height: 250px;" src="https://bandcamp.com/EmbeddedPlayer/track=469524244/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://mio9.bandcamp.com/track/ultra-hyper-xd">ULTRA * HYPER * XD by MIO9</a></iframe>
-  <iframe style="border: 0; width: 250px; height: 250px;" src="https://bandcamp.com/EmbeddedPlayer/track=2815041959/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://mio9.bandcamp.com/track/nameless-dimension">Nameless Dimension by mio9, RegZ</a></iframe>
-  <iframe style="border: 0; width: 250px; height: 250px;" src="https://bandcamp.com/EmbeddedPlayer/track=4067402184/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://mio9.bandcamp.com/track/flare">Flare by MIO9</a></iframe>
-</client-only>
+  <div class="album-container">
+      <iframe
+        src="https://bandcamp.com/EmbeddedPlayer/album=315346018/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+        seamless
+        ><a href="http://mio9.bandcamp.com/album/re-light"
+          >Re:Light by MiO9, RegZ</a
+        ></iframe
+      >
+      <iframe
+        src="https://bandcamp.com/EmbeddedPlayer/track=843483581/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+        seamless
+        ><a href="http://mio9.bandcamp.com/track/voyage"
+          >Voyage by MiO9, TACA Music</a
+        ></iframe
+      >
+      <iframe
+        src="https://bandcamp.com/EmbeddedPlayer/track=469524244/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+        seamless
+        ><a href="http://mio9.bandcamp.com/track/ultra-hyper-xd"
+          >ULTRA * HYPER * XD by MIO9</a
+        ></iframe
+      >
+      <iframe
+        src="https://bandcamp.com/EmbeddedPlayer/track=2815041959/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+        seamless
+        ><a href="http://mio9.bandcamp.com/track/nameless-dimension"
+          >Nameless Dimension by mio9, RegZ</a
+        ></iframe
+      >
+      <iframe
+        src="https://bandcamp.com/EmbeddedPlayer/track=4067402184/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+        seamless
+        ><a href="http://mio9.bandcamp.com/track/flare"
+          >Flare by MIO9</a
+        ></iframe
+      >
+    </div></client-only>
 <br>
 </template>
 <style scoped>
@@ -36,10 +67,10 @@ img.avatar {
 </style>
 <script>
 export default {
-  head(){
-    return{
-      title: "About - MiO9.sh"
-    }
-  }
-}
+  head() {
+    return {
+      title: "About - MiO9.sh",
+    };
+  },
+};
 </script>
