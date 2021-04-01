@@ -8,7 +8,7 @@
         <a href="https://songwhip.com/mio9/relight">[here]</a>
       </div>
       <div style="color: lime">-------------------</div>
-      
+      <marquee><img src="~/static/grass.jpg" alt="" height=20 width=1000></marquee>
       <div style="color: pink">
         It's coming down tho... it'S COMING DOWNN~ AAAAAAAAAAAAAAAAAAAA!!<br>
         Stay tuned!
@@ -36,6 +36,7 @@
         <div id="80-refresh" v-if="refreshes >= 80">
           &gt; What dafuq? what's wrong with you? 80 times seriously?
         </div>
+        <div id="grass">草。</div>
         <div v-for="line in terminalLines" :key="line">{{ line }}</div>
         <div>
           sh-{{ sh_ver }}$ {{ inputText }} <span v-show="underscore">_</span>
