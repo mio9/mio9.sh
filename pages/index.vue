@@ -189,7 +189,7 @@ export default {
       } else if (key == "Enter") {
         this.terminalLines.push("sh-" + this.sh_ver + "$ " + this.inputText);
         this.inputLine = [];
-        this.terminalLines.push("Your magic didn't work...?");
+        this.terminalLines.push("Your magic didn't work...? tho help list will be out later on");
       } else if (key == "Backspace") {
         this.inputLine.pop();
       }
