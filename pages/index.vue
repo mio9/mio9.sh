@@ -253,7 +253,7 @@ export default {
       // console.log(e.key);
       this.addInput(e.key);
     });
-    console.log("<<願榮光歸香港>>");
+    // console.log("<<願榮光歸香港>>");
     console.log(Phrases.glory);
     //set timer for the underscore
     setInterval(() => {
