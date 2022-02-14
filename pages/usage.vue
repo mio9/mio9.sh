@@ -39,14 +39,14 @@ We reserve the right to revoke usage permission of our tracks if we find the con
 This includes, but not limited to:
 - Hate speech
 - Illegal activities
-- Sexual content
 - Misleading/Fake content (i.e. content farms)
 - Illiterate content
+- Political usage
 
 If you want to use my track for commercial usage, or would like to repost/include my track into compilations, please contact me through [my email address](/about).
 
 
-<small>Last revivew: 2020-08-20</small>
+<small>Last revivew: 2021-08-06</small>
 </template>
 <script>
 export default {

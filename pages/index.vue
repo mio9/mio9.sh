@@ -38,7 +38,7 @@
         </div>
         <div v-for="line in terminalLines" :key="line">{{ line }}</div>
         <div>
-          sh-{{ sh_ver }}$ {{ inputText }} <span v-show="underscore">_</span>
+          sh-{{ sh_ver }}$ {{ inputText }}<span v-show="underscore">_</span>
         </div>
         <!-- <img src="@/assets/logo.png" alt=""> -->
       </client-only>
