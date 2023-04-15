@@ -9,6 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "consola": "^3.0.2",
     "nuxt": "^3.4.1",
     "nuxt-windicss": "^2.6.1"
   },
