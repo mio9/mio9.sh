@@ -11,7 +11,8 @@
   "devDependencies": {
     "consola": "^3.0.2",
     "nuxt": "^3.4.1",
-    "nuxt-windicss": "^2.6.1"
+    "nuxt-windicss": "^2.6.1",
+    "rome": "^12.0.0"
   },
   "dependencies": {
     "@nuxt/content": "^2.5.2",
