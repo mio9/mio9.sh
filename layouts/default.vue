@@ -2,7 +2,7 @@
   <div class="maincontainer">
     <h1 id="mio" @click="gotoLink('/')">mio9.sh</h1>
 
-    <div id="links">
+    <nav id="links">
       <!-- <span
         @click="showProjects=!showProjects"
         v-bind:class="{active:showProjects}"
@@ -39,8 +39,8 @@
         ></span
       >
 
-      <span class="minor-msg">LU:210324 / (c) 2020 MiO9</span>
-    </div>
+      <span class="minor-msg">LU:undefined / undefined</span>
+      </nav>
     <!-- <div id="contact" v-if="showContact">
       <span @click="openLink('https://twitter.com/mio9_sh')">[Twitter]</span>
       <span @click="openLink('https://instagram.com/mio9.sh')">[IG]</span>

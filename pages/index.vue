@@ -1,125 +1,22 @@
 <template>
   <div>
     <div id="console">
-      🌸WELCOME TO MIO9'S FAMILY 🌸
-      <div style="color: lime">-------[!!!]-------</div>
-      <div style="color: lime">
-        New album "Re:Light" has released! Check it out @
-        <a href="https://songwhip.com/mio9/relight">[here]</a>
-      </div>
-      <div style="color: lime">-------------------</div>
-      
-      <div style="color: pink">
-        It's coming down tho... it'S COMING DOWNN~ AAAAAAAAAAAAAAAAAAAA!!<br>
-        Stay tuned!
-      </div>
-      <client-only placeholder="Spinning up maximum craziness...!">
-        <div class="warning" v-if="!$device.isDesktop">
-          [HOLD UP!] Commmands won't work without a keyboard, plug one in before
-          trying the commands
-        </div>
-
-        <!-- <div>&lt;&lt;願榮光歸香港&gt;&gt; </div> -->
-        <span>sh-{{ sh_ver }}$ bash mio9.sh --caffine-level=9999</span>
-        <div>[INFO] Oh no that's uLtRA ☆ hYPeR ☆ aaaaAaaAAAAaaaaAAaa</div>
-        <div id="output" v-html="outText"></div>
-        <div id="10-refresh" v-if="refreshes >= 10">
-          &gt; How it feels to press F5 10 times?
-        </div>
-        <div id="20-refresh" v-if="refreshes >= 20">
-          &gt; Serious..? 10 more refreshes?
-        </div>
-        <div id="40-refresh" v-if="refreshes >= 40">
-          &gt; You did it 40 times already, you can just... click on the word to
-          get a new combination...
-        </div>
-        <div id="80-refresh" v-if="refreshes >= 80">
-          &gt; What dafuq? what's wrong with you? 80 times seriously?
-        </div>
-        <div v-for="line in terminalLines" :key="line">{{ line }}</div>
+      No bootable medium found!<br>
+      Please insert a bootable medium and reboot.<br>
+      <client-only placeholder="_">
         <div>
-          sh-{{ sh_ver }}$ {{ inputText }}<span v-show="underscore">_</span>
+          <span v-show="underscore">_</span>&nbsp;
         </div>
         <!-- <img src="@/assets/logo.png" alt=""> -->
       </client-only>
+      <div style="color:black">
+        <p>Life could be much better if facebook didn't exist, if people could solve their own problem, if there is no
+          online campfiring, and if people could stop looking at their phone while god damn eating.</p>
+        <p>and things could be even better if YOU the outsider could kindly shut the fuck up on things that bother you
+          nothing.</p>
+        <p>You think you understand, no you don't. You think you have the experience, no you don't. Shut up, thanks. You will never know what comes next to snap you back in half, for what you think was "helpful"</p>
+      </div>
     </div>
-    <hr />
-    <client-only>
-      <TextDiscography slot="placeholder" />
-      <div class="album-container">
-        <iframe
-          src="https://bandcamp.com/EmbeddedPlayer/album=315346018/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
-          seamless
-          ><a href="http://mio9.bandcamp.com/album/re-light"
-            >Re:Light by MiO9, RegZ</a
-          ></iframe
-        >
-        <iframe
-          src="https://bandcamp.com/EmbeddedPlayer/track=843483581/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
-          seamless
-          ><a href="http://mio9.bandcamp.com/track/voyage"
-            >Voyage by MiO9, TACA Music</a
-          ></iframe
-        >
-        <iframe
-          src="https://bandcamp.com/EmbeddedPlayer/track=469524244/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
-          seamless
-          ><a href="http://mio9.bandcamp.com/track/ultra-hyper-xd"
-            >ULTRA * HYPER * XD by MIO9</a
-          ></iframe
-        >
-        <iframe
-          src="https://bandcamp.com/EmbeddedPlayer/track=2815041959/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
-          seamless
-          ><a href="http://mio9.bandcamp.com/track/nameless-dimension"
-            >Nameless Dimension by mio9, RegZ</a
-          ></iframe
-        >
-        <iframe
-          src="https://bandcamp.com/EmbeddedPlayer/track=4067402184/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
-          seamless
-          ><a href="http://mio9.bandcamp.com/track/flare"
-            >Flare by MIO9</a
-          ></iframe
-        >
-      </div>
-      <iframe
-        width="100%"
-        height="450"
-        scrolling="no"
-        frameborder="no"
-        allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1231539586&color=%23b6b6b6&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-      ></iframe>
-      <div
-        style="
-          font-size: 10px;
-          color: #cccccc;
-          line-break: anywhere;
-          word-break: normal;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          font-weight: 100;
-        "
-      >
-        <a
-          href="https://soundcloud.com/mio9"
-          title="MIO9"
-          target="_blank"
-          style="color: #cccccc; text-decoration: none"
-          >MIO9</a
-        >
-        ·
-        <a
-          href="https://soundcloud.com/mio9/sets/latest-tracks"
-          title="Latest tracks"
-          target="_blank"
-          style="color: #cccccc; text-decoration: none"
-          >Latest tracks</a
-        >
-      </div>
-    </client-only>
   </div>
 </template>
 <script>
@@ -258,7 +155,7 @@ export default {
     //set timer for the underscore
     setInterval(() => {
       this.underscore = !this.underscore;
-    }, 500);
+    }, 250);
   },
 };
 </script>
@@ -266,7 +163,7 @@ export default {
 .warning {
   color: orange;
 }
+
 .love {
   color: plum;
-}
-</style>
+}</style>
