@@ -83,3 +83,5 @@ public
 
 # Service worker
 sw.*
+
+.DS_Store
