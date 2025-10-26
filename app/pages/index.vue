@@ -22,10 +22,9 @@
     <main class="p-10">
       <!-- Welcome section -->
       <section class="text-center mb-15">
-        <h2 class="text-3xl font-normal text-gray-800 m-0 mb-5 font-serif">Welcome to my musical journey</h2>
+        <h2 class="text-3xl font-normal text-gray-800 m-0 mb-5 font-serif">I make loud shit</h2>
         <p class="text-lg leading-relaxed text-gray-600 max-w-2xl mx-auto">
-          Discover my collection of ambient and electronic compositions, 
-          each piece crafted with care and inspired by the beauty of nature.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
       </section>
       
@@ -36,12 +35,9 @@
           <div class="absolute -bottom-2.5 left-1/2 transform -translate-x-1/2 w-15 h-0.5 bg-gradient-to-r from-transparent via-pink-300 to-transparent"></div>
         </h2>
         
-        <!-- Paw print near discography -->
-        <div class="absolute top-4 right-8">
-          <CatDecoration position="near-content" :size="20" />
-        </div>
+
         <div class="flex flex-col gap-5">
-          <DiscographyCard
+          <!-- <DiscographyCard
             title="Spring Awakening"
             releaseDate="March 2024"
             description="A collection of ambient pieces inspired by the first blooms of spring"
@@ -58,7 +54,7 @@
             releaseDate="August 2023"
             description="Late-night compositions for quiet contemplation"
             bandcampLink="https://mio9.bandcamp.com/album/midnight-reverie"
-          />
+          /> -->
         </div>
       </section>
     </main>

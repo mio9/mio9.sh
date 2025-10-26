@@ -10,13 +10,14 @@
         animationDuration: petal.duration + 's'
       }"
     >
-      <svg width="12" height="12" viewBox="0 0 12 12" class="drop-shadow-sm" style="filter: drop-shadow(0 1px 2px rgba(255, 183, 197, 0.3));">
+      <!-- <svg width="12" height="12" viewBox="0 0 12 12" class="drop-shadow-sm" style="filter: drop-shadow(0 1px 2px rgba(255, 183, 197, 0.3));">
         <path 
           d="M6 1 C4 0, 2 0, 1 1 C0 2, 0 4, 1 5 C2 6, 4 6, 6 5 C8 6, 10 6, 11 5 C12 4, 12 2, 11 1 C10 0, 8 0, 6 1 Z" 
           :fill="petal.color"
           opacity="0.7"
         />
-      </svg>
+      </svg> -->
+      <img src="~/assets/petal.svg" alt="blossom" height="12" width="12" class="drop-shadow-sm opacity-70" style="filter: drop-shadow(0 1px 2px rgba(255, 183, 197, 0.3));"/>
     </div>
   </div>
 </template>

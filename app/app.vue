@@ -16,9 +16,6 @@
     </div>
     
     <FloatingPetals />
-    <CatDecoration position="near-navigation" :size="35" />
-    <CatDecoration position="center-left" :size="30" />
-    <CatDecoration position="near-content" :size="25" />
   </div>
 </template>
 
