@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Delius', sans-serif;
+    --font-display: 'Delius', sans-serif;
+}
