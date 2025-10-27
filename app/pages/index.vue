@@ -12,9 +12,9 @@
     <nav class="py-5 px-10 border-b border-pink-200/20">
       <ul class="flex justify-center gap-10 list-none m-0 p-0">
         <li><a href="#" class="no-underline font-medium text-lg px-4 py-2 rounded-full transition-all duration-300 relative bg-linear-to-br from-pink-300 to-pink-200 text-gray-800 shadow-lg shadow-pink-200/30">Home</a></li>
-        <li><a href="#" class="text-gray-800 no-underline font-medium text-lg px-4 py-2 rounded-full transition-all duration-300 relative hover:bg-gradient-to-br hover:from-pink-300 hover:to-pink-200 hover:text-gray-800 hover:shadow-lg hover:shadow-pink-200/30">About</a></li>
-        <li><a href="#" class="text-gray-800 no-underline font-medium text-lg px-4 py-2 rounded-full transition-all duration-300 relative hover:bg-gradient-to-br hover:from-pink-300 hover:to-pink-200 hover:text-gray-800 hover:shadow-lg hover:shadow-pink-200/30">Music</a></li>
-        <li><a href="#" class="text-gray-800 no-underline font-medium text-lg px-4 py-2 rounded-full transition-all duration-300 relative hover:bg-gradient-to-br hover:from-pink-300 hover:to-pink-200 hover:text-gray-800 hover:shadow-lg hover:shadow-pink-200/30">Contact</a></li>
+        <li><a href="#" class="text-gray-800 no-underline font-medium text-lg px-4 py-2 rounded-full transition-all duration-300 relative hover:bg-linear-to-br hover:from-pink-300 hover:to-pink-200 hover:text-gray-800 hover:shadow-lg hover:shadow-pink-200/30">About</a></li>
+        <li><a href="#" class="text-gray-800 no-underline font-medium text-lg px-4 py-2 rounded-full transition-all duration-300 relative hover:bg-linear-to-brover:from-pink-300 hover:to-pink-200 hover:text-gray-800 hover:shadow-lg hover:shadow-pink-200/30">Music</a></li>
+        <li><a href="#" class="text-gray-800 no-underline font-medium text-lg px-4 py-2 rounded-full transition-all duration-300 relative hover:bg-linear-to-br hover:from-pink-300 hover:to-pink-200 hover:text-gray-800 hover:shadow-lg hover:shadow-pink-200/30">Contact</a></li>
       </ul>
     </nav>
     
@@ -32,7 +32,7 @@
       <section class="mt-10 relative">
         <h2 class="text-3xl font-normal text-gray-800 m-0 mb-8 text-center font-serif relative">
           Discography
-          <div class="absolute -bottom-2.5 left-1/2 transform -translate-x-1/2 w-15 h-0.5 bg-gradient-to-r from-transparent via-pink-300 to-transparent"></div>
+          <div class="absolute -bottom-2.5 left-1/2 transform -translate-x-1/2 w-15 h-0.5 bg-linear-to-r from-transparent via-pink-300 to-transparent"></div>
         </h2>
         
 
