@@ -62,9 +62,9 @@
 </template>
 
 <script setup lang="ts">
-import CherryBlossomMark from '~/components/CherryBlossomMark.vue'
-import DiscographyCard from '~/components/DiscographyCard.vue'
-import CatDecoration from '~/components/CatDecoration.vue'
+import CherryBlossomMark from "~/components/CherryBlossomMark.vue";
+import DiscographyCard from "~/components/DiscographyCard.vue";
+import CatDecoration from "~/components/CatDecoration.vue";
 </script>
 
 <style>

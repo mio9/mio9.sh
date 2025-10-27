@@ -31,33 +31,41 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed } from "vue";
 
 interface Props {
-  size?: number
-  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center-left' | 'center-right' | 'near-content' | 'near-navigation'
+  size?: number;
+  position?:
+    | "top-left"
+    | "top-right"
+    | "bottom-left"
+    | "bottom-right"
+    | "center-left"
+    | "center-right"
+    | "near-content"
+    | "near-navigation";
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 60,
-  position: 'bottom-right'
-})
+  position: "bottom-right",
+});
 
-const isHovered = ref(false)
+const isHovered = ref(false);
 
 const positionClasses = computed(() => {
   const positions = {
-    'top-left': 'top-8 left-8',
-    'top-right': 'top-8 right-8',
-    'bottom-left': 'bottom-8 left-8',
-    'bottom-right': 'bottom-8 right-8',
-    'center-left': 'top-1/2 left-4 transform -translate-y-1/2',
-    'center-right': 'top-1/2 right-4 transform -translate-y-1/2',
-    'near-content': 'top-32 left-16',
-    'near-navigation': 'top-20 right-12'
-  }
-  return positions[props.position]
-})
+    "top-left": "top-8 left-8",
+    "top-right": "top-8 right-8",
+    "bottom-left": "bottom-8 left-8",
+    "bottom-right": "bottom-8 right-8",
+    "center-left": "top-1/2 left-4 transform -translate-y-1/2",
+    "center-right": "top-1/2 right-4 transform -translate-y-1/2",
+    "near-content": "top-32 left-16",
+    "near-navigation": "top-20 right-12",
+  };
+  return positions[props.position];
+});
 </script>
 
 <style>

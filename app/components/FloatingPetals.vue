@@ -23,36 +23,36 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from "vue";
 
 interface Petal {
-  x: number
-  delay: number
-  duration: number
-  color: string
+  x: number;
+  delay: number;
+  duration: number;
+  color: string;
 }
 
-const petals = ref<Petal[]>([])
+const petals = ref<Petal[]>([]);
 
 const generatePetals = () => {
-  const petalColors = ['#FFB7C5', '#FFC9D4', '#FFD1DC', '#FFE4E6']
-  const newPetals: Petal[] = []
-  
+  const petalColors = ["#FFB7C5", "#FFC9D4", "#FFD1DC", "#FFE4E6"];
+  const newPetals: Petal[] = [];
+
   for (let i = 0; i < 8; i++) {
     newPetals.push({
       x: Math.random() * 100,
       delay: Math.random() * 5,
       duration: 8 + Math.random() * 4,
-      color: petalColors[Math.floor(Math.random() * petalColors.length)] || '#FFB7C5'
-    })
+      color: petalColors[Math.floor(Math.random() * petalColors.length)] || "#FFB7C5",
+    });
   }
-  
-  petals.value = newPetals
-}
+
+  petals.value = newPetals;
+};
 
 onMounted(() => {
-  generatePetals()
-})
+  generatePetals();
+});
 </script>
 
 <style>

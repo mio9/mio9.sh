@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import FloatingPetals from '~/components/FloatingPetals.vue'
+import FloatingPetals from "~/components/FloatingPetals.vue";
 </script>
 
 <style>

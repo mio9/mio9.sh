@@ -18,15 +18,15 @@
 
 <script setup lang="ts">
 interface Props {
-  width?: string
-  height?: number
-  color?: string
+  width?: string;
+  height?: number;
+  color?: string;
 }
 
 withDefaults(defineProps<Props>(), {
-  width: '100%',
+  width: "100%",
   height: 40,
-  color: '#FFF8F0'
-})
+  color: "#FFF8F0",
+});
 </script>
 

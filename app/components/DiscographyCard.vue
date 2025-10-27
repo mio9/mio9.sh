@@ -38,14 +38,14 @@
 
 <script setup lang="ts">
 interface Props {
-  title: string
-  releaseDate: string
-  coverImage?: string
-  bandcampLink?: string
-  description?: string
+  title: string;
+  releaseDate: string;
+  coverImage?: string;
+  bandcampLink?: string;
+  description?: string;
 }
 
-defineProps<Props>()
+defineProps<Props>();
 </script>
 
 <style>
