@@ -5,11 +5,11 @@
     "clientKind": "git",
     "useIgnoreFile": true
   },
+  "files": {
+    "includes": ["**/*.ts", "!**/*.json", "!**/*.lock"]
+  },
   "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true
-    }
+    "enabled": true
   },
   "formatter": {
     "lineWidth": 120,
