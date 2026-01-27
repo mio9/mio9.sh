@@ -23,13 +23,13 @@ export function useTermCmd() {
     const handleInput = () => {
         const [command, ...args] = input.value.split(' ');
         // check if command is valid
-        if (!commands[command as keyof typeof commands]) {
+        if (command && !commands[command as keyof typeof commands]) {
             lines.value.push(`command not found: ${command}`);
             input.value = '';
             return;
         }
         const result = commands[command as keyof typeof commands](args);
-        lines.value.push(`${input.value} ${result}`);
+        lines.value.push(`${result}`);
         input.value = '';
     }
 

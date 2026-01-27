@@ -2,9 +2,6 @@
     <div>
        <!-- terminal area -->
        <Terminal></Terminal>
-
-        
-
     </div>
 </template>
 
