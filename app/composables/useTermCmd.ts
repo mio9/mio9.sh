@@ -17,10 +17,13 @@ export function useTermCmd() {
         'exit': () => {
             return '??? why would you do that on a website?';
         },
+        'version': () => {
+            return 'LU:260128 / (c) 2026 MiO9';
+        },
         '': ()=>''
     }
 
-    const handleInput = () => {
+    function handleInput() {
         const [command, ...args] = input.value.split(' ');
         // check if command is valid
         if (command && !commands[command as keyof typeof commands]) {
@@ -33,9 +36,18 @@ export function useTermCmd() {
         input.value = '';
     }
 
+    const preLoadedMessages = [
+        '🐱 mau! mau! mau!',
+        'momoi is cyber, momoi is dev',
+    ]
+    function getPreLoadedMessages() {
+        return preLoadedMessages[Math.floor(Math.random() * preLoadedMessages.length)];
+    }
+
     return {
         lines,
         input,
-        handleInput
+        handleInput,
+        getPreLoadedMessages
     }
 }

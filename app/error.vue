@@ -1,11 +1,16 @@
 <template>
-<div>
-    <h2>{{ error?.status }}</h2>
-    <button @click="handleError">
-      Clear errors
-    </button>
-  </div>
+    <div>
+        <NuxtLayout name="default">
+            <h2>{{ error?.status }}</h2>
+            <button @click="handleError">
+                Clear errors
+            </button>
+        </NuxtLayout>
+    </div>
 </template>
+
+<style scoped></style>
+
 
 <script setup lang="ts">
 import type { NuxtError } from '#app'

@@ -10,18 +10,18 @@
       <div class="fixed inset-0 z-10 pointer-events-none crt-overlay"></div>
       
       <!-- Content -->
-      <div class="relative z-20 p-4 font-mono text-white min-h-screen">
+      <div class="relative z-20 p-5 font-mono text-white min-h-screen">
         <!-- top nav bar -->
         <div>
           <nav class="flex gap-4 items-center">
-            <h1 class="text-lg text-pink-400 drop-shadow-[0_0_8px_rgba(236,72,153,0.8)]">🌸 mio9.sh  / </h1>
+            <NuxtLink to="/"><h1 class="text-lg text-pink-300 drop-shadow-[0_0_8px_rgba(236,72,153,0.8)]">🌸 mio9.sh  / </h1></NuxtLink>
             <NuxtLink to="/about" class="text-sm hover:underline underline-offset-4 text-blue-400 hover:text-blue-300 transition-colors">about</NuxtLink>
-            <NuxtLink to="/projects" class="text-sm hover:underline underline-offset-4 text-blue-400 hover:text-blue-300 transition-colors">projects</NuxtLink>
+            <NuxtLink to="/sys" class="text-sm hover:underline underline-offset-4 text-blue-400 hover:text-blue-300 transition-colors">sys</NuxtLink>
             <NuxtLink to="/link" class="text-sm hover:underline underline-offset-4 text-blue-400 hover:text-blue-300 transition-colors">link</NuxtLink>
           </nav>
         </div>
         <!-- main content -->
-        <div class="mt-4">
+        <div class="mt-5">
           <slot />
         </div>
       </div>
