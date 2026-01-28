@@ -26,13 +26,33 @@
 
         <div class="mt-4 space-y-1">
           <p v-for="(line, index) in lines" :key="index"
-            class="text-sm text-purple-400 font-mono drop-shadow-[0_0_3px_rgba(192,132,252,0.6)]">{{ line }}</p>
+            class="text-sm text-purple-400 font-mono drop-shadow-[0_0_2px_rgba(192,132,252,0.6)]">{{ line }}</p>
         </div>
-        <div class="mt-1 flex items-center">
-          <span class="text-pink-400 mr-2 drop-shadow-[0_0_4px_rgba(236,72,153,0.8)] animate-pulse">$</span>
-          <input ref="inputRef" type="text"
-            class="flex-1 bg-transparent text-purple-400 outline-none border-none focus:outline-none font-mono caret-blue-400 placeholder-purple-400/50"
-            placeholder="_" v-model="input" @keydown.enter="handleInput" @click.stop />
+        <div class="mt-1 flex items-start relative">
+          <span class="text-pink-400 mr-2 drop-shadow-[0_0_4px_rgba(236,72,153,0.8)] animate-pulse mt-0.5">$</span>
+          <div class="flex-1 relative min-h-[1.5rem]">
+            <textarea 
+              ref="inputRef" 
+              class="absolute inset-0 w-full bg-transparent text-purple-400 outline-none border-none focus:outline-none font-mono placeholder-purple-400/50 resize-none overflow-hidden custom-caret text-overlay textarea-input"
+              placeholder=""
+              v-model="input" 
+              @keydown.enter.exact.prevent="handleInput"
+              @keydown.enter.shift.exact="input += '\n'"
+              @click.stop
+              @focus="isFocused = true"
+              @blur="isFocused = false"
+              rows="1"
+              :style="{ height: textareaHeight + 'px' }"
+            ></textarea>
+            <div class="font-mono text-purple-400 pointer-events-none text-overlay" :style="{ minHeight: textareaHeight + 'px', width: '100%' }">
+              <span class="text-content">{{ input }}</span>
+              <span 
+                v-if="isFocused" 
+                class="custom-cursor"
+                :class="{ 'blink': isFocused }"
+              >█</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -45,10 +65,32 @@
 <script setup lang="ts">
 import { useTermCmd } from '../composables/useTermCmd';
 const { lines, input, handleInput, getPreLoadedMessages } = useTermCmd();
-const inputRef = ref<HTMLInputElement | null>(null);
+const inputRef = ref<HTMLTextAreaElement | null>(null);
+const isFocused = ref(false);
+const textareaHeight = ref(24);
+
 const randomPreLoadedMessage = computed(() => getPreLoadedMessages());
+
+const adjustTextareaHeight = () => {
+  if (inputRef.value) {
+    inputRef.value.style.height = 'auto';
+    const scrollHeight = inputRef.value.scrollHeight;
+    textareaHeight.value = Math.max(24, scrollHeight);
+    inputRef.value.style.height = textareaHeight.value + 'px';
+  }
+};
+
+watch(input, () => {
+  adjustTextareaHeight();
+});
+
+onMounted(() => {
+  adjustTextareaHeight();
+});
+
 const focusInput = () => {
   inputRef.value?.focus();
+  isFocused.value = true;
 }
 </script>
 
@@ -122,11 +164,63 @@ const focusInput = () => {
   }
 }
 
+/* Hide default caret */
+.custom-caret {
+  caret-color: transparent;
+}
+
+/* Ensure textarea and overlay have matching text rendering */
+.text-overlay {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  width: 100%;
+}
+
+.textarea-input {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.text-content {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  display: inline;
+}
+
 /* Text shadow glow effect */
-input:focus {
+textarea:focus {
+  text-shadow:
+    0 0 5px rgba(192, 132, 252, 0.5),
+    0 0 10px rgba(192, 132, 252, 0.3),
+    0 0 15px rgba(192, 132, 252, 0.3);
+}
+
+/* Custom cursor */
+.custom-cursor {
+  color: rgb(192, 132, 252);
   text-shadow:
     0 0 5px rgba(192, 132, 252, 0.8),
-    0 0 10px rgba(192, 132, 252, 0.6),
-    0 0 15px rgba(192, 132, 252, 0.4);
+    0 0 10px rgba(192, 132, 252, 0.6);
+  margin-left: 1px;
+  font-family: monospace;
+  line-height: 1;
+  display: inline-block;
+}
+
+.custom-cursor.blink {
+  animation: blink-cursor 1s step-end infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
 }
 </style>

@@ -20,6 +20,14 @@ export function useTermCmd() {
         'version': () => {
             return 'LU:260128 / (c) 2026 MiO9';
         },
+        'wallpaper': (args: string[]) => {
+            const mainStore = useMainStore();
+            mainStore.wallpaper = args[0] || '';
+            return `wallpaper set to: ${mainStore.wallpaper}`;
+        },
+        'wp': (args: string[]) => {
+            return commands.wallpaper(args);
+        },
         '': ()=>''
     }
 
