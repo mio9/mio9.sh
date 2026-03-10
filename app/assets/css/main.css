@@ -1,2 +1,7 @@
 /* @import "@catppuccin/palette/style"; */
 @import "tailwindcss";
+
+@theme {
+    --font-display: "Inter", "sans-serif";
+    --font-mono: "JetBrains Mono", "monospace";
+}

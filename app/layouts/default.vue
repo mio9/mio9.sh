@@ -2,8 +2,7 @@
   <div class="relative min-h-screen overflow-hidden">
     <!-- Background image -->
     <div class="fixed inset-0 z-0">
-      <NuxtImg :src="wallpaper" alt="background"
-        class="w-full h-full object-cover" />
+      <NuxtImg :src="wallpaper" alt="background" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-slate-950/90"></div>
     </div>
 
@@ -33,6 +32,29 @@
       <div class="mt-5">
         <slot />
       </div>
+      <footer class="text-slate-400 mt-5">
+        <div class="flex items-center gap-2 text-2xl">
+          <span class="text-blue-400 hover:text-blue-300 transition-colors">
+            <NuxtLink to="https://github.com/mio9" class="pb-2"><Icon name="uil:github" class="mr-1"/></NuxtLink>
+          </span>
+          <span class="text-blue-400 hover:text-blue-300 transition-colors">
+            <NuxtLink to="https://x.com/mio9_sh" class="pb-2"><Icon name="uil:twitter" class="mr-1"/></NuxtLink>
+          </span>
+          <span class="text-blue-400 hover:text-blue-300 transition-colors">
+            <NuxtLink to="https://github.com/mio9" class="pb-2"><Icon name="uil:instagram" class="mr-1"/></NuxtLink>
+          </span>
+          <span class="text-blue-400 hover:text-blue-300 transition-colors">
+            <NuxtLink to="https://github.com/mio9" class="pb-2"><Icon name="uil:youtube" class="mr-1"/></NuxtLink>
+          </span>
+          <span class="text-blue-400 hover:text-blue-300 transition-colors">
+            <NuxtLink to="https://github.com/mio9" class="pb-2"><Icon name="uil:discord" class="mr-1"/></NuxtLink>
+          </span>
+          <span class="text-blue-400 hover:text-blue-300 transition-colors">
+            <NuxtLink to="https://github.com/mio9" class="pb-2"><Icon name="mdi:spotify" class="mr-1"/></NuxtLink>
+          </span>
+        </div>
+        <p class="text-sm">© 2026 MiO9</p>
+      </footer>
     </div>
   </div>
 </template>
