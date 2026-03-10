@@ -26,6 +26,14 @@
                 <div class="mt-4 space-y-1">
                     <template v-for="(line, index) in lines" :key="index">
                         <div v-if="line.type === 'spacer'" class="h-3" />
+                        <NuxtImg
+                            v-else-if="line.type === 'image' && line.src"
+                            :src="line.src"
+                            :alt="line.text"
+                            class="object-cover border border-purple-500/30"
+                            :style="imageStyle(line)"
+                            :class="roundedClass(line.rounded)"
+                        />
                         <p
                             v-else
                             class="font-mono drop-shadow-[0_0_2px_rgba(192,132,252,0.6)]"
@@ -68,7 +76,7 @@
 </template>
 
 <script setup lang="ts">
-import type { TerminalLine, TerminalLineType } from '~/composables/useShell';
+import type { TerminalLine, TerminalLineType, TerminalImageRounded } from '~/composables/useShell';
 
 const props = withDefaults(
     defineProps<{
@@ -95,6 +103,23 @@ const emit = defineEmits<{
 const inputRef = ref<HTMLTextAreaElement | null>(null);
 const isFocused = ref(false);
 const textareaHeight = ref(24);
+
+function imageStyle(line: TerminalLine) {
+    const w = line.width ?? 128;
+    const h = line.height ?? w;
+    return { width: `${w}px`, height: `${h}px` };
+}
+
+function roundedClass(rounded?: TerminalImageRounded): string {
+    const map: Record<TerminalImageRounded, string> = {
+        none: 'rounded-none',
+        sm: 'rounded-sm',
+        md: 'rounded-md',
+        lg: 'rounded-lg',
+        full: 'rounded-full',
+    };
+    return map[rounded ?? 'lg'];
+}
 
 function lineClass(type?: TerminalLineType): string {
     const base = 'text-sm';

@@ -1,8 +1,18 @@
-export type TerminalLineType = 'output' | 'error' | 'prompt' | 'info' | 'title' | 'subheading' | 'muted' | 'spacer';
+export type TerminalLineType = 'output' | 'error' | 'prompt' | 'info' | 'title' | 'subheading' | 'muted' | 'spacer' | 'image';
+
+export type TerminalImageRounded = 'none' | 'sm' | 'md' | 'lg' | 'full';
 
 export interface TerminalLine {
     text: string;
     type?: TerminalLineType;
+    /** Image src (required when type is 'image') */
+    src?: string;
+    /** Image width in pixels (default: 128). Height uses this for square when height omitted. */
+    width?: number;
+    /** Image height in pixels (default: same as width for square) */
+    height?: number;
+    /** Border radius (default: 'lg') */
+    rounded?: TerminalImageRounded;
 }
 
 export function useShell() {
