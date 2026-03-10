@@ -2,8 +2,8 @@
   <div class="relative min-h-screen overflow-hidden">
     <!-- Background image -->
     <div class="fixed inset-0 z-0">
-      <img :src="wallpaper" alt="background"
-        class="w-full h-full object-cover opacity-0.5" />
+      <NuxtImg :src="wallpaper" alt="background"
+        class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-slate-950/90"></div>
     </div>
 
@@ -24,9 +24,9 @@
           <NuxtLink to="/notes"
             class="text-sm hover:underline underline-offset-4 text-blue-400 hover:text-blue-300 transition-colors">notes
           </NuxtLink>
-          <NuxtLink to="/sys"
+          <!-- <NuxtLink to="/sys"
             class="text-sm hover:underline underline-offset-4 text-blue-400 hover:text-blue-300 transition-colors">sys
-          </NuxtLink>
+          </NuxtLink> -->
         </nav>
       </div>
       <!-- main content -->
