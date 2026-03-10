@@ -11,7 +11,7 @@ const aboutLines: TerminalLine[] = [
     { text: 'About', type: 'title' },
     { text: 'The MiO9', type: 'subheading' },
     { text: 'The odd-eye white cat thing that sometimes makes music and videos. Discovering new stuff and breaking out of the box is my daily routine, just to bring more fun to my life and so to you.', type: 'output' },
-    { text: 'Currenly shows up as DJ / VJ / LJ / Web Developer / Music Producer / Artist / etc.', type: 'output' },
+    { text: 'Currenly shows up as DJ / VJ / LJ / Web Developer / Music Producer', type: 'output' },
     { text: "", type: 'spacer' },
     { text: "I'm also a bit of a nerd, so I like to code and build things.", type: 'output' },
 ];
