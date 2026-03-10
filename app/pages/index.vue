@@ -1,9 +1,14 @@
 <template>
     <div>
         <!-- terminal area -->
-        <Terminal></Terminal>
+        <Terminal
+            :lines="lines"
+            :pre-message="preMessage"
+            v-model="input"
+            @submit="handleInput"
+        />
         <!-- Discography -->
-        <h2 class="text-2xl font-bold text-white mb-4 mt-4">🎵 > Discography</h2>
+        <h2 class="text-2xl font-bold text-purple-300 mb-4 mt-4">🎵 > Discography</h2>
         <div class="flex flex-wrap justify-start gap-4 h-auto">
             <iframe class="w-[200px] h-[200px]"
                 src="https://bandcamp.com/EmbeddedPlayer/album=315346018/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
@@ -25,5 +30,6 @@
 </template>
 
 <script setup lang="ts">
-
+const { lines, input, handleInput, getPreLoadedMessage } = useShell();
+const preMessage = computed(() => getPreLoadedMessage());
 </script>
