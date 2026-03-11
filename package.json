@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
+    "build:cloudflare": "nuxt build --preset=cloudflare_module",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "@catppuccin/tailwindcss": "^1.0.0",
-    "@nuxt/icon": "^2.2.1"
+    "@nuxt/icon": "^2.2.1",
+    "baseline-browser-mapping": "^2.10.0"
   }
 }

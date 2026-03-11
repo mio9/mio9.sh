@@ -32,4 +32,21 @@
 <script setup lang="ts">
 const { lines, input, handleInput, getPreLoadedMessage } = useShell();
 const preMessage = computed(() => getPreLoadedMessage());
+useHead({
+    title: "MiO9.sh",
+    meta: [
+        { name: 'description', content: 'MiO9.sh Homepage' },
+    ]
+})
+useSeoMeta({
+    title: "MiO9.sh",
+    description: "MiO9.sh Homepage",
+    ogTitle: "MiO9.sh",
+    ogDescription: "MiO9.sh Homepage",
+    ogImage: "https://mio9.sh/og-image.png",
+    ogUrl: "https://mio9.sh",
+    ogType: "website",
+    ogLocale: "en_US",
+    ogSiteName: "MiO9.sh",
+})
 </script>
