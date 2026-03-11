@@ -41,16 +41,16 @@
             <NuxtLink to="https://x.com/mio9_sh" class="pb-2"><Icon name="uil:twitter" class="mr-1"/></NuxtLink>
           </span>
           <span class="text-blue-400 hover:text-blue-300 transition-colors">
-            <NuxtLink to="https://github.com/mio9" class="pb-2"><Icon name="uil:instagram" class="mr-1"/></NuxtLink>
+            <NuxtLink to="https://www.instagram.com/mio9.sh/" class="pb-2"><Icon name="uil:instagram" class="mr-1"/></NuxtLink>
           </span>
           <span class="text-blue-400 hover:text-blue-300 transition-colors">
-            <NuxtLink to="https://github.com/mio9" class="pb-2"><Icon name="uil:youtube" class="mr-1"/></NuxtLink>
+            <NuxtLink to="https://www.youtube.com/mio9_sh" class="pb-2"><Icon name="uil:youtube" class="mr-1"/></NuxtLink>
           </span>
           <span class="text-blue-400 hover:text-blue-300 transition-colors">
-            <NuxtLink to="https://github.com/mio9" class="pb-2"><Icon name="uil:discord" class="mr-1"/></NuxtLink>
+            <NuxtLink to="https://discord.gg/UYX84Za" class="pb-2"><Icon name="uil:discord" class="mr-1"/></NuxtLink>
           </span>
           <span class="text-blue-400 hover:text-blue-300 transition-colors">
-            <NuxtLink to="https://github.com/mio9" class="pb-2"><Icon name="mdi:spotify" class="mr-1"/></NuxtLink>
+            <NuxtLink to="https://open.spotify.com/artist/6Je4oc6u6uBvknRMD4WOJ4" class="pb-2"><Icon name="mdi:spotify" class="mr-1"/></NuxtLink>
           </span>
         </div>
         <p class="text-sm">© 2026 MiO9</p>
