@@ -15,8 +15,11 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "MiO9.sh"
-    }
+      title: "MiO9.sh",
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
+    },
   },
 
   devServer: {
