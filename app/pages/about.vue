@@ -1,5 +1,5 @@
 <template>
-    <Terminal :lines="aboutLines" header-left="$ cat about.txt" header-right="" :interactive="false" />
+    <Terminal :lines="aboutLines" header-left="$ cat about.md | mdrender" header-right="" :interactive="false" />
 </template>
 
 <script setup lang="ts">
