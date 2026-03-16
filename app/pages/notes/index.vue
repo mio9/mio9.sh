@@ -12,6 +12,8 @@ useSeoMeta({
     description: notes.value?.description
 })
 const notesLines: TerminalLine[] = [
+    { text: '"notes": No such file or directory (os error 2)', type: 'error' },
+    { text: "", type: 'spacer' },
     { text: 'Notes', type: 'title' },
     { text: 'Notes', type: 'subheading' },
     { text: 'Notes', type: 'output' },

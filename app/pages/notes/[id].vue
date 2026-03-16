@@ -2,7 +2,7 @@
   <div>
     <ContentRenderer v-if="notes" :value="notes" />
     <div v-else>
-      <h1>{{ params.id }} not found anywhere here! 🐱</h1>
+      <Terminal :lines="notesLines" :header-left="`$ cat notes/${params.id}.md | mdrender`" :interactive="false" />
     </div>
     <pre>{{ notes }}</pre>
   </div>
@@ -15,5 +15,12 @@ useSeoMeta({
     title: notes.value?.title,
     description: notes.value?.description
 })
-
+const notesLines: TerminalLine[] = [
+    { text: `cat: notes/${params.id}.md: No such file or directory`, type: 'error' },
+    { text: "", type: 'spacer' },
+    { text: 'Notes', type: 'title' },
+    { text: 'Notes', type: 'subheading' },
+    { text: 'Notes', type: 'output' },
+    { text: 'Notes is under construction, check back later! 🏗️', type: 'output' },
+]
 </script>
