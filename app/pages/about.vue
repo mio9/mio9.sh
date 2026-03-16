@@ -14,5 +14,7 @@ const aboutLines: TerminalLine[] = [
     { text: 'Currenly shows up as DJ / VJ / LJ / Web Developer / Music Producer', type: 'output' },
     { text: "", type: 'spacer' },
     { text: "Also a bit of a nerd, so I like to code and build random things. Rules are a joke.", type: 'output' },
+    { text: "", type: 'spacer' },
+    { text: "↓ find mio ↓ observe mio ↙ follow mio ↙", type: 'subheading' },
 ];
 </script>
