@@ -32,7 +32,16 @@ export default defineNuxtConfig({
   nitro: {
     compatibilityDate: '2025-07-15',
     cloudflare: {
-      deployConfig: true
+      deployConfig: true,
+      wrangler: {
+        d1_databases: [
+          {
+            binding: 'DB',
+            database_name: 'mio9sh-content',
+            database_id: 'a7c1fe0b-7bba-4afd-9a4c-df4d0afb6b53'
+          }
+        ]
+      },
     }
   },
 
