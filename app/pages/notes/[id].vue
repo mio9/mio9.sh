@@ -1,11 +1,10 @@
 <template>
   <div>
     <article v-if="notes" class="note-prose">
-      <div class="flex gap-2">
-      <h1 class="pb-3">{{ notes.title }}</h1>
-      <span class="text-sm text-slate-300/90 mb-4">{{ notes.meta.date }}</span>
-      <span class="text-sm text-slate-300/90 mb-4">{{ notes.meta.author }}</span>
-      </div>
+      <header class="note-meta-row">
+        <h1>{{ notes.title }}</h1>
+        <p v-if="byline" class="note-byline">{{ byline }}</p>
+      </header>
       <ContentRenderer :value="notes" />
     </article>
     <div v-else>
@@ -18,6 +17,19 @@
 <script setup lang="ts">
 const params = useRoute().params
 const { data: notes } = await useAsyncData(() => queryCollection('content').path(`/notes/${params.id}`).first())
+
+const byline = computed(() => {
+  const n = notes.value as Record<string, unknown> | undefined
+  if (!n) return ''
+  const meta = (n.meta ?? {}) as { date?: unknown; author?: unknown }
+  const d = meta.date ?? n.date
+  const a = meta.author ?? n.author
+  const ds = d != null && d !== '' ? String(d) : ''
+  const as = a != null && a !== '' ? String(a) : ''
+  if (ds && as) return `${ds} ${as}`
+  return ds || as
+})
+
 useSeoMeta({
   title: notes.value?.title,
   description: notes.value?.description
