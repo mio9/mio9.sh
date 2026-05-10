@@ -31,15 +31,17 @@ const byline = computed(() => {
 })
 
 useSeoMeta({
-  title: notes.value?.title,
-  description: notes.value?.description
+  title: () => notes.value?.title ?? 'Note not found',
+  description: () => notes.value?.description,
 })
-const notesLines: TerminalLine[] = [
-  { text: `cat: notes/${params.id}.md: No such file or directory`, type: 'error' },
-  { text: "", type: 'spacer' },
-  { text: 'Notes', type: 'title' },
-  { text: 'Notes', type: 'subheading' },
-  { text: 'Notes', type: 'output' },
-  { text: 'Notes is under construction, check back later! 🏗️', type: 'output' },
-]
+
+const route = useRoute()
+const notesLines = computed<TerminalLine[]>(() => [
+  {
+    text: `cat: notes/${String(route.params.id)}.md: No such file or directory`,
+    type: 'error',
+  },
+  { text: '', type: 'spacer' },
+  { text: '← ls notes (back to listing)', to: '/notes', type: 'output' },
+])
 </script>
