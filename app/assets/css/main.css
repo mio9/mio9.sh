@@ -21,8 +21,8 @@
 }
 
 .note-prose h2 {
-    @apply text-xl font-semibold text-purple-200 mb-3 mt-10 leading-snug border-b border-purple-500/25 pb-2;
-    text-shadow: 0 0 6px rgba(192, 132, 252, 0.35);
+    @apply text-xl font-semibold text-cyan-300 mb-3 mt-10 leading-snug border-b border-cyan-500/30 pb-2;
+    text-shadow: 0 0 8px rgba(34, 211, 238, 0.35);
 }
 
 .note-prose h1 + h2 {
@@ -30,12 +30,13 @@
 }
 
 .note-prose h3 {
-    @apply text-lg font-semibold text-purple-300 mb-2 mt-6;
-    text-shadow: 0 0 4px rgba(192, 132, 252, 0.3);
+    @apply text-lg font-semibold text-cyan-400 mb-2 mt-6;
+    text-shadow: 0 0 6px rgba(240, 171, 252, 0.35);
 }
 
 .note-prose h4 {
-    @apply text-base font-semibold text-purple-300/95 mb-2 mt-4;
+    @apply text-base font-semibold text-amber-200/95 mb-2 mt-4;
+    text-shadow: 0 0 5px rgba(253, 230, 138, 0.25);
 }
 
 .note-prose h5 {
@@ -55,7 +56,7 @@
     @apply mb-0;
 }
 
-.note-prose a {
+.note-prose p>a {
     @apply text-blue-400 underline underline-offset-4 decoration-blue-400/60 transition-colors;
 }
 

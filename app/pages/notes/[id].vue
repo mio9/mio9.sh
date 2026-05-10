@@ -1,6 +1,11 @@
 <template>
   <div>
     <article v-if="notes" class="note-prose">
+      <div class="flex gap-2">
+      <h1 class="pb-3">{{ notes.title }}</h1>
+      <span class="text-sm text-slate-300/90 mb-4">{{ notes.meta.date }}</span>
+      <span class="text-sm text-slate-300/90 mb-4">{{ notes.meta.author }}</span>
+      </div>
       <ContentRenderer :value="notes" />
     </article>
     <div v-else>
