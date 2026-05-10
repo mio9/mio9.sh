@@ -5,3 +5,139 @@
     --font-display: "Inter", "sans-serif";
     --font-mono: "JetBrains Mono", "monospace";
 }
+
+/* Note markdown: keep in global CSS — @apply in Vue SFC + :deep() is not reliably processed by Tailwind v4 */
+
+.note-prose {
+    @apply max-w-screen rounded-lg border border-purple-500/30 bg-black/80 backdrop-blur-sm p-4 md:p-6;
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.2),
+        inset 0 0 50px rgba(0, 0, 0, 0.45);
+}
+
+.note-prose h1 {
+    @apply text-2xl font-bold text-pink-300 mb-4 mt-0 leading-tight;
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.45);
+}
+
+.note-prose h2 {
+    @apply text-xl font-semibold text-purple-200 mb-3 mt-10 leading-snug border-b border-purple-500/25 pb-2;
+    text-shadow: 0 0 6px rgba(192, 132, 252, 0.35);
+}
+
+.note-prose h1 + h2 {
+    @apply mt-5;
+}
+
+.note-prose h3 {
+    @apply text-lg font-semibold text-purple-300 mb-2 mt-6;
+    text-shadow: 0 0 4px rgba(192, 132, 252, 0.3);
+}
+
+.note-prose h4 {
+    @apply text-base font-semibold text-purple-300/95 mb-2 mt-4;
+}
+
+.note-prose h5 {
+    @apply text-sm font-semibold text-purple-300/95 mb-2 mt-4 tracking-wide uppercase;
+}
+
+.note-prose h6 {
+    @apply text-sm font-medium text-purple-400/90 mb-2 mt-3;
+}
+
+.note-prose p {
+    @apply text-sm text-purple-300/95 leading-relaxed mb-4;
+    text-shadow: 0 0 2px rgba(192, 132, 252, 0.35);
+}
+
+.note-prose p:last-child {
+    @apply mb-0;
+}
+
+.note-prose a {
+    @apply text-blue-400 underline underline-offset-4 decoration-blue-400/60 transition-colors;
+}
+
+.note-prose a:hover {
+    @apply text-blue-300 decoration-blue-300;
+}
+
+.note-prose strong {
+    @apply font-semibold text-purple-100;
+    text-shadow: 0 0 4px rgba(192, 132, 252, 0.4);
+}
+
+.note-prose em {
+    @apply text-purple-200/95 italic;
+}
+
+.note-prose ul,
+.note-prose ol {
+    @apply my-4 pl-5 text-sm text-purple-300/95 space-y-1;
+    text-shadow: 0 0 2px rgba(192, 132, 252, 0.3);
+}
+
+.note-prose ul {
+    @apply list-disc;
+}
+
+.note-prose ol {
+    @apply list-decimal;
+}
+
+.note-prose li::marker {
+    @apply text-purple-400;
+}
+
+.note-prose blockquote {
+    @apply border-l-2 border-purple-500/50 pl-4 my-4 text-purple-400/90 italic bg-purple-950/25 py-2 pr-3 rounded-r;
+}
+
+.note-prose hr {
+    @apply border-0 border-t border-purple-500/30 my-8;
+}
+
+.note-prose code:not(pre code) {
+    @apply rounded px-1.5 py-0.5 text-[0.8125rem] bg-slate-900/90 text-purple-200 border border-purple-500/25;
+}
+
+.note-prose pre {
+    @apply my-4 p-4 rounded-lg overflow-x-auto text-[0.8125rem] leading-relaxed bg-slate-950/95 border border-purple-500/30;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.note-prose pre code {
+    @apply bg-transparent border-0 p-0 rounded-none shadow-none font-mono;
+    color: inherit;
+}
+
+.note-prose img {
+    @apply max-w-full rounded-lg border border-purple-500/30 my-4;
+    box-shadow: 0 0 16px rgba(168, 85, 247, 0.2);
+}
+
+.note-prose table {
+    @apply w-full text-sm my-4 border-collapse border border-purple-500/25 rounded-lg overflow-hidden;
+}
+
+.note-prose th,
+.note-prose td {
+    @apply border border-purple-500/20 px-3 py-2 text-left align-top;
+}
+
+.note-prose th {
+    @apply bg-purple-950/40 text-purple-200 font-semibold;
+}
+
+.note-prose tbody tr:nth-child(even) {
+    @apply bg-purple-950/15;
+}
+
+.note-prose td {
+    @apply text-purple-300/95;
+}
+
+.note-prose thead {
+    @apply border-b border-purple-500/30;
+}
