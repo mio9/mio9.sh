@@ -65,6 +65,8 @@ export function useShell() {
     const preLoadedMessages = [
         '🐱 mau! mau! mau!',
         'momoi is cyber, momoi is dev',
+        "can't sleep 2am i dont' really mind it",
+        'worldwidesuperstarrunningoutofmilage'
     ];
 
     function getPreLoadedMessage() {
