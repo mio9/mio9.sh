@@ -35,6 +35,26 @@
                             :class="roundedClass(line.rounded)"
                         />
                         <p
+                            v-else-if="lineHasLink(line)"
+                            class="text-sm font-mono leading-relaxed wrap-break-word"
+                        >
+                            <span
+                                v-if="line.prefix"
+                                class="text-purple-400/95 drop-shadow-[0_0_2px_rgba(192,132,252,0.55)] whitespace-pre-wrap"
+                            >{{ line.prefix }}</span>
+                            <NuxtLink
+                                :to="line.to"
+                                class="text-blue-400 underline underline-offset-4 decoration-blue-400/60 transition-colors hover:text-blue-300 hover:decoration-blue-300 drop-shadow-[0_0_2px_rgba(96,165,250,0.45)] wrap-break-word"
+                                @click.stop
+                            >
+                                {{ line.text }}
+                            </NuxtLink>
+                            <span
+                                v-if="line.suffix"
+                                class="text-purple-400 drop-shadow-[0_0_2px_rgba(192,132,252,0.6)]"
+                            >{{ line.suffix }}</span>
+                        </p>
+                        <p
                             v-else
                             class="font-mono drop-shadow-[0_0_2px_rgba(192,132,252,0.6)]"
                             :class="lineClass(line.type)"
@@ -103,6 +123,10 @@ const emit = defineEmits<{
 const inputRef = ref<HTMLTextAreaElement | null>(null);
 const isFocused = ref(false);
 const textareaHeight = ref(24);
+
+function lineHasLink(line: TerminalLine): line is TerminalLine & { to: string } {
+    return typeof line.to === 'string' && line.to.length > 0
+}
 
 function imageStyle(line: TerminalLine) {
     const w = line.width ?? 128;

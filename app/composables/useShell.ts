@@ -5,6 +5,12 @@ export type TerminalImageRounded = 'none' | 'sm' | 'md' | 'lg' | 'full';
 export interface TerminalLine {
     text: string;
     type?: TerminalLineType;
+    /** Plain text rendered before an in-terminal link (`to`), e.g. `ls -l` columns. */
+    prefix?: string;
+    /** When set, `text` is rendered as an in-terminal link (e.g. note filenames). */
+    to?: string;
+    /** Plain text shown after the link on the same line (e.g. " — Title"). */
+    suffix?: string;
     /** Image src (required when type is 'image') */
     src?: string;
     /** Image width in pixels (default: 128). Height uses this for square when height omitted. */
