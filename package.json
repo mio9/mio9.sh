@@ -17,6 +17,7 @@
     "@nuxt/image": "2.0.0",
     "@pinia/nuxt": "0.11.3",
     "@tailwindcss/vite": "^4.2.1",
+    "@vueuse/core": "^14.3.0",
     "@zenfs/core": "^2.5.2",
     "better-sqlite3": "^12.6.2",
     "nuxt": "^4.3.1",

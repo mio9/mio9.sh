@@ -24,8 +24,63 @@
 }
 
 .note-prose .note-byline {
-    @apply m-0 shrink-0 text-right whitespace-nowrap font-mono text-sm text-purple-300/85 max-sm:w-full;
+    @apply m-0 shrink-0 text-right whitespace-nowrap font-mono text-sm text-purple-300/85;
     text-shadow: 0 0 4px rgba(192, 132, 252, 0.3);
+}
+
+.note-prose .note-meta-trailing {
+    @apply flex max-sm:w-full shrink-0 flex-wrap items-center justify-end gap-x-3 gap-y-2;
+}
+
+.note-prose .note-versions-wrap {
+    @apply relative flex shrink-0 items-center;
+}
+
+.note-prose .note-versions-trigger {
+    @apply flex cursor-pointer rounded-md border border-purple-500/35 bg-purple-950/40 p-1.5 text-cyan-400/95 outline-none transition-colors hover:border-purple-400/50 hover:bg-purple-900/50 hover:text-cyan-300;
+    text-shadow: 0 0 6px rgba(34, 211, 238, 0.35);
+}
+
+.note-prose .note-versions-trigger:focus-visible {
+    @apply ring-2 ring-cyan-500/60 ring-offset-2 ring-offset-slate-950;
+}
+
+.note-prose .note-versions-popover {
+    @apply overflow-y-auto rounded-lg border border-purple-500/40 bg-slate-950/95 p-3 shadow-[0_12px_40px_rgba(0,0,0,0.65)] backdrop-blur-sm;
+}
+
+.note-prose .note-versions-popover-header {
+    @apply mb-3 flex items-center justify-between gap-2 border-b border-purple-500/25 pb-2;
+}
+
+.note-prose .note-versions-popover-title {
+    @apply m-0 border-0 pb-0 text-sm font-semibold text-cyan-300;
+    text-shadow: 0 0 6px rgba(34, 211, 238, 0.3);
+}
+
+.note-prose .note-versions-close {
+    @apply flex shrink-0 cursor-pointer rounded p-1 text-purple-400/90 outline-none transition-colors hover:bg-purple-900/60 hover:text-purple-200;
+}
+
+.note-prose .note-versions-close:focus-visible {
+    @apply ring-2 ring-cyan-500/60 ring-offset-2 ring-offset-slate-950;
+}
+
+.note-prose .note-versions-popover .note-versions-list {
+    @apply m-0 list-decimal space-y-3 pl-5 text-sm;
+}
+
+.note-prose .note-versions-popover .note-versions-list li {
+    @apply flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3;
+    text-shadow: 0 0 2px rgba(192, 132, 252, 0.25);
+}
+
+.note-prose .note-versions-date {
+    @apply shrink-0 font-mono text-purple-400/95;
+}
+
+.note-prose .note-versions-body {
+    @apply m-0 min-w-0 flex-1 leading-relaxed text-purple-300/95;
 }
 
 .note-prose h1 {
@@ -155,3 +210,4 @@
 .note-prose thead {
     @apply border-b border-purple-500/30;
 }
+
