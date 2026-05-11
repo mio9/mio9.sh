@@ -66,7 +66,7 @@ export function useShell() {
         '🐱 mau! mau! mau!',
         'momoi is cyber, momoi is dev',
         "can't sleep 2am i dont' really mind it",
-        'worldwidesuperstarrunningoutofmilage'
+        'worldwide superstar running out of mileage'
     ];
 
     function getPreLoadedMessage() {

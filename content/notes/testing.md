@@ -2,6 +2,9 @@
 # date: 2026-05-05
 title: Testing
 description: This is a test of the content module.
+versions:
+  - date: 2026-05-11T05:00:00+09:00
+    content: 初版
 ---
 
 # Hello world 1
@@ -15,10 +18,17 @@ This is a test of the content. This is a test of the content. This is a test of 
 This is a test of the content. This is a test of the content This is a test of the content. This is a test of the content
 `this is monospace`
 
-```javascript
+```js
 const a = 1;
 const b = 2;
 const c = a + b;
+// This is a comment
 console.log('this is code block');
 console.log(c);
+function add(a, b) {
+  return a + b;
+}
+add(a, b);
+console.log(add(a, b));
+console.log(add(a, b));
 ```
