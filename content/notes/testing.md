@@ -4,7 +4,7 @@ title: Testing
 description: This is a test of the content module.
 versions:
   - date: 2026-05-11T05:00:00+09:00
-    content: 初版
+    content: Initial version
 ---
 
 # Hello world 1
