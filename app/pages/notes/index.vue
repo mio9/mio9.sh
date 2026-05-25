@@ -10,6 +10,7 @@ type NoteListItem = {
     title?: string
     description?: string
     date?: string
+    tags?: string[]
 }
 
 const LS_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -67,12 +68,29 @@ function displayBasename(note: NoteListItem) {
     return stem.replace(/-/g, ' ')
 }
 
+function noteTags(note: NoteListItem): string[] {
+    const n = note as Record<string, unknown>
+    const meta = (n.meta ?? {}) as Record<string, unknown>
+    const raw = meta.tags ?? n.tags
+    if (raw == null) return []
+    const list = Array.isArray(raw) ? raw : [raw]
+    return list.map((t) => String(t).trim()).filter((t) => t !== '')
+}
+
+/** Terminal-style tag suffix after filename, e.g. `  #thoughts #meta`. */
+function tagsSuffix(note: NoteListItem) {
+    const tags = noteTags(note)
+    if (!tags.length) return ''
+    return `  ${tags.map((t) => `#${t}`).join(' ')}`
+}
+
 const terminalLines = computed<TerminalLine[]>(() => {
     const list = noteList.value
     if (list?.length) {
         return list.map((n) => ({
             prefix: lsLinePrefix(n),
             text: displayBasename(n),
+            suffix: tagsSuffix(n),
             to: `/notes/${noteSlug(n.path)}`,
             type: 'output' as const,
         }))

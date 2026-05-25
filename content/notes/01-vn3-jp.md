@@ -3,6 +3,7 @@ date: 2026-05-11T05:00:00+09:00
 title: VN3とVRCクリエイターコミュニティーに関する記事
 description: VN3ライセンスについての記事
 author: mio9
+tags: ['thoughts','rights']
 versions:
   - date: 2026-05-11T05:00:00+09:00
     content: 初版
