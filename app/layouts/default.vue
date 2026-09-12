@@ -52,6 +52,9 @@
           <span class="text-blue-400 hover:text-blue-300 transition-colors">
             <NuxtLink to="https://open.spotify.com/artist/6Je4oc6u6uBvknRMD4WOJ4" class="pb-2"><Icon name="mdi:spotify" class="mr-1"/></NuxtLink>
           </span>
+          <span class="text-blue-400 hover:text-blue-300 transition-colors">
+            <NuxtLink to="https://vrchat.com/home/user/usr_d6c69116-0a60-4e1e-97a8-39152283f38c" class="pb-2"><Icon name="simple-icons:vrchat" class="mr-1"/></NuxtLink>
+          </span>
         </div>
         <p class="text-sm">© 2026 MiO9</p>
       </footer>
